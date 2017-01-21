@@ -47,7 +47,7 @@ anims/wave = ExtResource( 3 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
-autoplay = ""
+autoplay = "wave"
 
 [node name="Area2D" type="Area2D" parent="."]
 

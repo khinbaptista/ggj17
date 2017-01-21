@@ -25,6 +25,7 @@ func _ready():
 func _fixed_process(delta):
 	grounded = is_grounded()
 	movement = Vector2()
+	
 	if Input.is_action_pressed("move_left"):
 		movement.x -= 1
 	if Input.is_action_pressed("move_right"):
@@ -36,14 +37,10 @@ func _fixed_process(delta):
 	else:
 		jumping = false
 		jump_timer = 0.0
-	
-	if jumping: print(jump_timer)
 
 func _input(event):
 	if event.is_action_pressed("jump") and not event.is_echo() and not jumping and grounded:
 		jumping = true
-	elif event.type == InputEvent.KEY and event.scancode == KEY_RETURN:
-		shockwave()
 
 func _integrate_forces(state):
 	if movement == Vector2(): return
@@ -57,6 +54,3 @@ func is_grounded():
 	var cast = space.intersect_ray(global_pos, global_pos + Vector2(0, ground_test_distance))
 	
 	return not cast.empty()
-
-func shockwave():
-	pass

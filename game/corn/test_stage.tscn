@@ -111,6 +111,8 @@ max_jump_duration = 0.4
 
 [node name="corns" type="Node2D" parent="."]
 
+editor/display_folded = true
+
 [node name="corn" parent="corns" instance=ExtResource( 2 )]
 
 editor/display_folded = true
