@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=1]
+[gd_scene load_steps=11 format=1]
 
 [ext_resource path="res://MicrowaveWhite.png" type="Texture" id=1]
 [ext_resource path="res://MicrowaveBG.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://corn/player_corn.tscn" type="PackedScene" id=4]
 [ext_resource path="res://wave/wavecreator.tscn" type="PackedScene" id=5]
 [ext_resource path="res://wave/wave_destroyer.gd" type="Script" id=6]
+[ext_resource path="res://stage/microwave_timer.gd" type="Script" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -432,6 +433,8 @@ transform/pos = Vector2( 47.7135, 65.8902 )
 
 [node name="destroyers" type="Node" parent="."]
 
+editor/display_folded = true
+
 [node name="Area2D" type="Area2D" parent="destroyers"]
 
 editor/display_folded = true
@@ -475,5 +478,24 @@ script/script = ExtResource( 6 )
 shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
+
+[node name="display" type="Node" parent="."]
+
+script/script = ExtResource( 7 )
+display_sec_unit = null
+display_sec_ten = null
+display_min_unit = null
+
+[node name="sec_unit" type="Node2D" parent="display"]
+
+transform/pos = Vector2( 974.386, 73.0508 )
+
+[node name="sec_ten" type="Node2D" parent="display"]
+
+transform/pos = Vector2( 945.135, 73.0508 )
+
+[node name="min_unit" type="Node2D" parent="display"]
+
+transform/pos = Vector2( 901.391, 73.0508 )
 
 
