@@ -104,10 +104,8 @@ _update_shape_index = 0
 
 [node name="player_corn" parent="." instance=ExtResource( 1 )]
 
-transform/pos = Vector2( 470.224, 283.608 )
+transform/pos = Vector2( 494.779, 66.2981 )
 collision/layers = 1
-start_color = null
-pop_color = null
 jump_impulse = 200
 max_jump_duration = 0.4
 

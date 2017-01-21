@@ -34,7 +34,7 @@ damp_override/angular = -1.0
 script/script = ExtResource( 1 )
 health = 100.0
 start_color = Color( 1, 1, 1, 1 )
-pop_color = Color( 0.867188, 0.277771, 0.277771, 1 )
+pop_color = Color( 0.9375, 0.340576, 0.340576, 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 

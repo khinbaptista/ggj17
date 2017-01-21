@@ -1,8 +1,8 @@
 extends RigidBody2D
 
 export(float, 0, 1000, 0.5) var health = 100.0
-export(Color) var start_color
-export(Color) var pop_color
+export(Color) var start_color = Color(1, 1, 1)
+export(Color) var pop_color = Color(1, 1, 1)
 
 var max_health
 
