@@ -20,4 +20,4 @@ func explode():
 	var popcorn = popcorn_res.instance();
 	popcorn.set_global_pos(get_global_pos())
 	get_parent().get_parent().add_child(popcorn)
-	queue_free()
+	get_parent().queue_free()
