@@ -9,9 +9,10 @@ script/script = ExtResource( 2 )
 speed = 10
 jump_impulse = 50
 max_jump_duration = 0.5
+ground_test_distance = 100
 
 [node name="Sprite" parent="."]
 
-modulate = Color( 0.958801, 1, 0.472656, 1 )
+modulate = Color( 0.867922, 0.902344, 0.461746, 1 )
 
 

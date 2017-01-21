@@ -106,7 +106,29 @@ _update_shape_index = 0
 [node name="player_corn" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 470.224, 283.608 )
-jump_impulse = 250
+input/pickable = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 10.0
+friction = 1.0
+bounce = 0.3
+gravity_scale = 5.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+health = 100.0
+start_color = null
+pop_color = null
+jump_impulse = 200
+max_jump_duration = 0.4
 
 [node name="corns" type="Node2D" parent="."]
 
@@ -116,32 +138,136 @@ editor/display_folded = true
 
 transform/pos = Vector2( 320.44, 219.765 )
 
+[node name="corn17 8" parent="corns" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 139.962, 202.577 )
+
 [node name="corn1" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 647.018, 217.31 )
+
+[node name="corn17" parent="corns" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 466.541, 200.121 )
 
 [node name="corn2" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 795.575, 302.024 )
 
+[node name="corn17 5" parent="corns" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 615.097, 284.835 )
+
 [node name="corn3" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 514.423, 190.3 )
+
+[node name="corn17 3" parent="corns" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 333.945, 173.111 )
 
 [node name="corn4" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 648.246, 375.688 )
 
+[node name="corn17 7" parent="corns" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 467.769, 358.5 )
+
 [node name="corn5" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 392.876, 422.342 )
 
+[node name="corn17 4" parent="corns" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 212.399, 405.154 )
+
 [node name="corn6" parent="corns" instance=ExtResource( 2 )]
 
-transform/pos = Vector2( 195.21, 326.579 )
+transform/pos = Vector2( 341.311, 289.746 )
+
+[node name="corn17 6" parent="corns" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 160.834, 272.558 )
 
 [node name="corn7" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 885.2, 430.936 )
+
+[node name="corn17 2" parent="corns" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 704.722, 413.748 )
+
+[node name="corn8" parent="corns" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 761.198, 475.135 )
+
+[node name="corn17 11" parent="corns" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 545.116, 460.402 )
+
+[node name="corn9" parent="corns" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 596.681, 483.729 )
+
+[node name="corn17 12" parent="corns" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 416.203, 466.541 )
+
+[node name="corn10" parent="corns" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 542.661, 397.787 )
+
+[node name="corn17 9" parent="corns" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 362.183, 380.599 )
+
+[node name="corn11" parent="corns" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 331.49, 349.906 )
+
+[node name="corn17 10" parent="corns" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 151.012, 332.717 )
+
+[node name="corn12" parent="corns" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 378.144, 114.18 )
+
+[node name="corn17 13" parent="corns" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 197.666, 96.9913 )
+
+[node name="corn13" parent="corns" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 239.409, 289.746 )
+
+[node name="corn17 14" parent="corns" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 58.9315, 272.558 )
+
+[node name="corn14" parent="corns" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 241.865, 168.2 )
+
+[node name="corn17 15" parent="corns" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 61.387, 151.012 )
+
+[node name="corn15" parent="corns" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 321.668, 410.065 )
+
+[node name="corn17 16" parent="corns" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 141.19, 392.876 )
+
+[node name="corn16" parent="corns" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 306.935, 497.234 )
+
+[node name="corn17 17" parent="corns" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 126.457, 480.046 )
 
 
