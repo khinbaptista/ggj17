@@ -5,7 +5,7 @@ export(int) var speed = 10
 export(int) var jump_impulse = 50
 export(float, 0.1, 2.0, 0.1) var max_jump_duration = 0.5
 
-export(int, 0, 1000) var ground_test_distance = 10
+export(int, 0, 1000) var ground_test_distance = 2
 
 var movement
 
@@ -41,6 +41,7 @@ func _fixed_process(delta):
 func _input(event):
 	if event.is_action_pressed("jump") and not event.is_echo() and not jumping and grounded:
 		jumping = true
+		print("new jump")
 
 func _integrate_forces(state):
 	if movement == Vector2(): return
@@ -51,6 +52,6 @@ func _integrate_forces(state):
 func is_grounded():
 	var global_pos = get_global_pos()
 	var space = get_world_2d().get_direct_space_state()
-	var cast = space.intersect_ray(global_pos, global_pos + Vector2(0, ground_test_distance))
+	var cast = space.intersect_ray(global_pos, global_pos + Vector2(0, ground_test_distance), [self] )
 	
 	return not cast.empty()
