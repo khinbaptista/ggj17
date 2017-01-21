@@ -1,14 +1,12 @@
 extends KinematicBody2D
 
 export(int) var speed = 300
-export(float) var damage = 10
 
 func _ready():
 	set_fixed_process(true)
 	move(Vector2(0.01*rand_range(0, 100), 0.01*rand_range(0, 100)))
 	
 func _fixed_process(delta):
-	cornCollision()
 	var move_dir = changeDir().normalized()
 	var motion = move_dir * speed * delta
 	move(motion)
@@ -18,9 +16,3 @@ func changeDir():
 		return get_collision_normal().reflect(get_travel())
 	else:
 		return get_travel()
-		
-func cornCollision():
-	if is_colliding():
-		var body = get_collider()
-		if body.has_method("hit"):
-			body.hit(damage)
