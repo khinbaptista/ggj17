@@ -27,7 +27,8 @@ func hit(damage):
 		health = 0
 		get_node("Sprite").set_modulate(Color(1, 1, 1))
 		changeAnim("Stage 5")
-		anim.connect("finished", self, "emit_signal", ["popped"])
+		#anim.connect("finished", self, "emit_signal", ["popped"])
+		anim.connect("finished", self, "death")
 
 func selectAnim():
 	var rate = max_health - health
@@ -45,3 +46,13 @@ func selectAnim():
 
 func changeAnim(animName):
 	anim.play(animName)
+
+func death():
+	var sample_player = get_node("SamplePlayer")
+	var voice = sample_player.play("pop")
+	sample_player.set_pitch_scale(voice, 0.45 + randf() * 0.4)
+	
+	while sample_player.is_active():
+		yield(get_tree(), "idle_frame")
+	
+	emit_signal("popped")

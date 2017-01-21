@@ -10,3 +10,4 @@ func _ready():
 
 func quit():
 	get_node("../SamplePlayer").play("ping")
+	get_tree().quit()
