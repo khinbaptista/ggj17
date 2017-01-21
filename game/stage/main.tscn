@@ -20,14 +20,12 @@ extents = Vector2( 10, 271.293 )
 
 [node name="MicrowaveWhite" type="Sprite" parent="."]
 
-visibility/visible = false
 transform/pos = Vector2( 514.698, 299.248 )
 transform/scale = Vector2( 1.44301, 1.47651 )
 texture = ExtResource( 1 )
 
 [node name="MicrowaveBG" type="Sprite" parent="."]
 
-visibility/visible = false
 transform/pos = Vector2( 415.499, 302.688 )
 transform/scale = Vector2( 1.41687, 1.37415 )
 texture = ExtResource( 2 )
@@ -124,6 +122,8 @@ trigger = false
 _update_shape_index = 0
 
 [node name="corns" type="Node2D" parent="."]
+
+editor/display_folded = true
 
 [node name="corn" parent="corns" instance=ExtResource( 3 )]
 
