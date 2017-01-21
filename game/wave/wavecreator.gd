@@ -14,6 +14,6 @@ func _fixed_process(delta):
 	acctime += delta
 	if(acctime > timespawn):
 		var newWave = wave.instance()
-		newWave.set_pos(Vector2(0, rand_range(0, height)))
+		newWave.set_pos(Vector2(50, rand_range(0, height)))
 		get_tree().get_root().add_child(newWave)
 		acctime = 0
