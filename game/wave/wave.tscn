@@ -8,14 +8,14 @@
 [sub_resource type="CapsuleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 70.0362
-height = 444.077
+radius = 15.9421
+height = 33.8355
 
 [node name="wave" type="KinematicBody2D"]
 
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( -1.13277e-08, 0.259148, -0.126265, -5.51922e-09, 18.3591, -0.273372 )
+shapes/0/transform = Matrix32( -4.37114e-08, 1, -1, -4.37114e-08, 17.2458, -2.34731e-07 )
 shapes/0/trigger = false
 collision/layers = 6
 collision/mask = 0
@@ -25,15 +25,16 @@ speed = 500
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
-transform/pos = Vector2( 18.3591, -0.273372 )
+visibility/visible = false
+transform/pos = Vector2( 17.2458, -2.34731e-07 )
 transform/rot = -90.0
-transform/scale = Vector2( 0.259148, 0.126265 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
 
 [node name="Sprite" type="Sprite" parent="."]
 
+editor/display_folded = true
 transform/scale = Vector2( 1.99567, 1.99567 )
 texture = ExtResource( 2 )
 hframes = 4
@@ -52,6 +53,7 @@ autoplay = "wave"
 
 [node name="Sprite1" type="Sprite" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 35, 0 )
 transform/scale = Vector2( 1.99567, 1.99567 )
 texture = ExtResource( 2 )
@@ -73,7 +75,7 @@ autoplay = "wave"
 
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( -9.43773e-09, 0.21591, -0.077468, -3.38623e-09, 0.241485, -0.142389 )
+shapes/0/transform = Matrix32( -4.37114e-08, 1, -1, -4.37114e-08, 17.3924, -1.1471e-06 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -85,9 +87,8 @@ damage = 10.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 
 visibility/visible = false
-transform/pos = Vector2( 0.241485, -0.142389 )
+transform/pos = Vector2( 17.3924, -1.1471e-06 )
 transform/rot = -90.0
-transform/scale = Vector2( 0.21591, 0.077468 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
