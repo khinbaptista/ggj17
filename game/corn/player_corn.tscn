@@ -23,7 +23,6 @@ modulate = Color( 0.867922, 0.902344, 0.461746, 1 )
 
 [node name="CollisionShape2D" parent="."]
 
-visibility/visible = true
 transform/pos = Vector2( -0.296192, -0.755714 )
 transform/scale = Vector2( 1.57178, 1.57178 )
 

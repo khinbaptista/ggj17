@@ -107,27 +107,8 @@ _update_shape_index = 0
 [node name="player_corn" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 470.224, 283.608 )
-input/pickable = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
 health = 100.0
 pop_color = Color( 0.760784, 0.172549, 0.172549, 1 )
-diff_anims = 5
 jump_impulse = 200
 max_jump_duration = 0.4
 
