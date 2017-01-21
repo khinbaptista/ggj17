@@ -21,6 +21,7 @@ collision/mask = 0
 collision/margin = 0.08
 script/script = ExtResource( 1 )
 speed = 300
+damage = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
