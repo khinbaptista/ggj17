@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=1]
+[gd_scene load_steps=11 format=1]
 
 [ext_resource path="res://MicrowaveWhite.png" type="Texture" id=1]
 [ext_resource path="res://MicrowaveBG.png" type="Texture" id=2]
@@ -6,8 +6,7 @@
 [ext_resource path="res://corn/player_corn.tscn" type="PackedScene" id=4]
 [ext_resource path="res://wave/wavecreator.tscn" type="PackedScene" id=5]
 [ext_resource path="res://wave/wave_destroyer.gd" type="Script" id=6]
-[ext_resource path="res://stage/microwave_timer.gd" type="Script" id=7]
-[ext_resource path="res://stage/timer_font.tres" type="Texture" id=8]
+[ext_resource path="res://stage/display/display.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -431,6 +430,7 @@ jump_impulse = 200
 [node name="wavecreator" parent="." instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 47.7135, 65.8902 )
+leftWay = false
 
 [node name="destroyers" type="Node" parent="."]
 
@@ -480,43 +480,6 @@ shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 
-[node name="display" type="Node" parent="."]
-
-script/script = ExtResource( 7 )
-time_scale = 5.0
-minutes = 3
-seconds = 30
-
-[node name="sec_unit" type="Sprite" parent="display"]
-
-transform/pos = Vector2( 973.856, 72.8359 )
-transform/scale = Vector2( 1.42982, 1.42982 )
-texture = ExtResource( 8 )
-hframes = 10
-region_rect = Rect2( 0, 0, 21, 37 )
-
-[node name="sec_ten" type="Sprite" parent="display"]
-
-transform/pos = Vector2( 944.896, 72.8359 )
-transform/scale = Vector2( 1.42982, 1.42982 )
-texture = ExtResource( 8 )
-hframes = 10
-region_rect = Rect2( 0, 0, 21, 37 )
-
-[node name="min_unit" type="Sprite" parent="display"]
-
-transform/pos = Vector2( 902.483, 72.8359 )
-transform/scale = Vector2( 1.42982, 1.42982 )
-texture = ExtResource( 8 )
-hframes = 10
-region_rect = Rect2( 0, 0, 21, 37 )
-
-[node name="min_ten" type="Sprite" parent="display"]
-
-transform/pos = Vector2( 873.222, 72.8359 )
-transform/scale = Vector2( 1.42982, 1.42982 )
-texture = ExtResource( 8 )
-hframes = 10
-region_rect = Rect2( 0, 0, 21, 37 )
+[node name="display" parent="." instance=ExtResource( 7 )]
 
 

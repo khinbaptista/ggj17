@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://stage/microwave_timer.gd" type="Script" id=1]
+[ext_resource path="res://stage/timer_font.tres" type="Texture" id=2]
+
+[node name="display" type="Node"]
+
+script/script = ExtResource( 1 )
+time_scale = 5.0
+minutes = 3
+seconds = 30
+
+[node name="sec_unit" type="Sprite" parent="."]
+
+transform/pos = Vector2( 973.856, 72.8359 )
+transform/scale = Vector2( 1.42982, 1.42982 )
+texture = ExtResource( 2 )
+hframes = 10
+region_rect = Rect2( 0, 0, 21, 37 )
+
+[node name="sec_ten" type="Sprite" parent="."]
+
+transform/pos = Vector2( 944.896, 72.8359 )
+transform/scale = Vector2( 1.42982, 1.42982 )
+texture = ExtResource( 2 )
+hframes = 10
+region_rect = Rect2( 0, 0, 21, 37 )
+
+[node name="min_unit" type="Sprite" parent="."]
+
+transform/pos = Vector2( 902.483, 72.8359 )
+transform/scale = Vector2( 1.42982, 1.42982 )
+texture = ExtResource( 2 )
+hframes = 10
+region_rect = Rect2( 0, 0, 21, 37 )
+
+[node name="min_ten" type="Sprite" parent="."]
+
+transform/pos = Vector2( 873.222, 72.8359 )
+transform/scale = Vector2( 1.42982, 1.42982 )
+texture = ExtResource( 2 )
+hframes = 10
+region_rect = Rect2( 0, 0, 21, 37 )
+
+

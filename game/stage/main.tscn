@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=1]
+[gd_scene load_steps=18 format=1]
 
 [ext_resource path="res://stage/menu.tscn" type="PackedScene" id=1]
 [ext_resource path="res://corn/corn.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://corn/ping.wav" type="Sample" id=9]
 [ext_resource path="res://corn/118655__pyzaist__yay - 8-bit.wav" type="Sample" id=10]
 [ext_resource path="res://Pipo_InterludoBeta.smp" type="Sample" id=11]
+[ext_resource path="res://stage/display/display.tscn" type="PackedScene" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -522,5 +523,9 @@ default/chorus_send = 0.0
 [node name="wavecreator 2" parent="." instance=ExtResource( 4 )]
 
 leftWay = true
+
+[node name="display" parent="." instance=ExtResource( 12 )]
+
+time_scale = 2.0
 
 
