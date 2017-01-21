@@ -1,7 +1,7 @@
 extends Node2D
 
 var wave
-var timespawn = 10
+export var timespawn = 10
 var acctime = 0
 
 func _ready():

@@ -1,11 +1,19 @@
-extends Node2D
+extends KinematicBody2D
 
-export(int) var speed = 50
+export(int) var speed = 300
 
 func _ready():
 	set_fixed_process(true)
+	move(Vector2(1, 1))
 	
 func _fixed_process(delta):
-	var move_dir = Vector2(1, 0)
+	var move_dir = changeDir().normalized()
 	var motion = move_dir * speed * delta
-	set_pos(get_pos() + motion)
+	move(motion)
+	
+func changeDir():
+	if is_colliding():
+		return get_collision_normal().reflect(get_travel())
+	else:
+		return get_travel()
+	
