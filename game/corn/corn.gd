@@ -6,6 +6,9 @@ export(Color) var pop_color = Color(1, 1, 1)
 
 export(int) var diff_anims = 5
 
+export(float, 0, 1, 0.05) var min_pitch_ratio = 0.5
+export(float, 0, 1, 0.05) var delta_pitch_ratio = 0.5
+
 var max_health
 var anim
 
@@ -50,7 +53,7 @@ func changeAnim(animName):
 func death():
 	var sample_player = get_node("SamplePlayer")
 	var voice = sample_player.play("pop")
-	sample_player.set_pitch_scale(voice, 0.45 + randf() * 0.4)
+	sample_player.set_pitch_scale(voice, min_pitch_ratio + randf() * delta_pitch_ratio)
 	
 	while sample_player.is_active():
 		yield(get_tree(), "idle_frame")
