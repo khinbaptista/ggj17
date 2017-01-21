@@ -447,6 +447,7 @@ jump_impulse = 200
 [node name="wavecreator" parent="." instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 47.7135, 65.8902 )
+leftWay = false
 
 [node name="destroyers" type="Node" parent="."]
 
@@ -618,5 +619,9 @@ default/filter/gain = 1.0
 default/reverb_room = 2
 default/reverb_send = 0.0
 default/chorus_send = 0.0
+
+[node name="wavecreator 2" parent="." instance=ExtResource( 5 )]
+
+leftWay = true
 
 

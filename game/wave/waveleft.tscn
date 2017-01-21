@@ -8,25 +8,25 @@
 [sub_resource type="CapsuleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 8.98069
-height = 21.3761
+radius = 9.22394
+height = 13.7069
 
 [node name="wave" type="KinematicBody2D"]
 
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 3.83355, 0, 0, 1, 0, 0 )
+shapes/0/transform = Matrix32( -4.37114e-08, 1, -1, -4.37114e-08, 17.2458, -2.34731e-07 )
 shapes/0/trigger = false
 collision/layers = 6
 collision/mask = 0
 collision/margin = 0.08
 script/script = ExtResource( 1 )
 speed = 500
-left = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
-transform/scale = Vector2( 3.83355, 1 )
+transform/pos = Vector2( 17.2458, -2.34731e-07 )
+transform/rot = -90.0
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
@@ -34,7 +34,6 @@ _update_shape_index = 0
 [node name="Sprite" type="Sprite" parent="."]
 
 editor/display_folded = true
-transform/pos = Vector2( -17, 0 )
 transform/scale = Vector2( 1.99567, 1.99567 )
 texture = ExtResource( 2 )
 hframes = 4
@@ -54,7 +53,7 @@ autoplay = "wave"
 [node name="Sprite1" type="Sprite" parent="."]
 
 editor/display_folded = true
-transform/pos = Vector2( 17, 0 )
+transform/pos = Vector2( 35, 0 )
 transform/scale = Vector2( 1.99567, 1.99567 )
 texture = ExtResource( 2 )
 hframes = 4
