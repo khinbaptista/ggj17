@@ -350,6 +350,7 @@ jump_impulse = 200
 [node name="wavecreator" parent="." instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 47.7135, 65.8902 )
+timetohard = 20
 
 [node name="destroyers" type="Node" parent="."]
 
