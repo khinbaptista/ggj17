@@ -1,0 +1,522 @@
+[gd_scene load_steps=12 format=1]
+
+[ext_resource path="res://MicrowaveWhite.png" type="Texture" id=1]
+[ext_resource path="res://MicrowaveBG.png" type="Texture" id=2]
+[ext_resource path="res://corn/corn.tscn" type="PackedScene" id=3]
+[ext_resource path="res://corn/player_corn.tscn" type="PackedScene" id=4]
+[ext_resource path="res://wave/wavecreator.tscn" type="PackedScene" id=5]
+[ext_resource path="res://wave/wave_destroyer.gd" type="Script" id=6]
+[ext_resource path="res://stage/microwave_timer.gd" type="Script" id=7]
+[ext_resource path="res://stage/timer_font.tres" type="Texture" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 411.541, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 271.293 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 346.321 )
+
+[node name="main" type="Node"]
+
+[node name="MicrowaveWhite" type="Sprite" parent="."]
+
+transform/pos = Vector2( 514.698, 299.248 )
+transform/scale = Vector2( 1.44301, 1.47651 )
+texture = ExtResource( 1 )
+
+[node name="MicrowaveBG" type="Sprite" parent="."]
+
+transform/pos = Vector2( 415.499, 302.688 )
+transform/scale = Vector2( 1.41687, 1.37415 )
+texture = ExtResource( 2 )
+
+[node name="walls" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="top" type="StaticBody2D" parent="walls"]
+
+editor/display_folded = true
+transform/pos = Vector2( 456.724, 318.049 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -46.7274, -296.946 )
+shapes/0/trigger = false
+collision/layers = 3
+collision/mask = 3
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/top"]
+
+transform/pos = Vector2( -46.7274, -296.946 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="bottom" type="StaticBody2D" parent="walls"]
+
+editor/display_folded = true
+transform/pos = Vector2( 464.261, 871.243 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -46.7274, -296.946 )
+shapes/0/trigger = false
+collision/layers = 3
+collision/mask = 3
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/bottom"]
+
+transform/pos = Vector2( -46.7274, -296.946 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="left" type="StaticBody2D" parent="walls"]
+
+editor/display_folded = true
+input/pickable = false
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 19.5954, 298.453 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/left"]
+
+transform/pos = Vector2( 19.5954, 298.453 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+
+[node name="right" type="StaticBody2D" parent="walls"]
+
+editor/display_folded = true
+transform/pos = Vector2( 794.369, 0 )
+input/pickable = false
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 19.5954, 298.453 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/right"]
+
+transform/pos = Vector2( 19.5954, 298.453 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+
+[node name="corns" type="Node" parent="."]
+
+editor/display_folded = true
+
+[node name="corn" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 389.604, 315.785 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn7" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 538.831, 204.242 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn8" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 407.901, 399.032 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn6" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 68.5404, 332.365 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn7 8" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 217.767, 220.822 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn79" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 86.8374, 415.612 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn2" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 472.508, 320.307 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn7 3" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 621.734, 208.764 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn74" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 490.805, 403.554 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn6 2" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 151.444, 336.887 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn63" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 300.671, 225.344 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn65 2" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 169.741, 420.135 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn1" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 448.391, 365.527 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn7 4" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 597.617, 253.984 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn75" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 466.688, 448.774 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn6 3" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 127.327, 382.108 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn64" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 276.553, 270.564 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn65" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 145.624, 465.355 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn2 2" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 531.294, 370.049 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn24 2" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 680.521, 258.506 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn243" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 549.591, 453.296 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn23" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 210.231, 386.63 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn24" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 359.458, 275.086 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn25" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 228.528, 469.877 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn 2" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 223.797, 332.365 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn7 6" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 373.024, 220.822 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn77" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 242.094, 415.612 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn5 3" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 306.701, 336.887 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn54" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 455.927, 225.344 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn56" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 324.998, 420.135 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn3" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 282.583, 382.108 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn7 9" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 431.81, 270.564 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn710" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 300.88, 465.355 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn5 4" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 365.487, 386.63 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn55" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 514.713, 275.086 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn56 3" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 383.784, 469.877 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn 3" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 526.772, 333.873 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn7 5" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 675.999, 222.329 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn76" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 545.069, 417.12 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn5 2" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 609.676, 338.395 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn53" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 758.902, 226.851 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn56 2" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 627.973, 421.642 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn4" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 585.558, 383.615 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn7 2" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 734.785, 272.072 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn73" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 603.855, 466.862 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn5" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 668.462, 388.137 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn7 7" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 737.8, 351.961 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="corn78" parent="corns" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 686.759, 471.384 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+
+[node name="player_corn" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 121.923, 282.261 )
+min_pitch_ratio = 0.5
+delta_pitch_ratio = 0.5
+jump_impulse = 200
+
+[node name="wavecreator" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 47.7135, 65.8902 )
+
+[node name="destroyers" type="Node" parent="."]
+
+editor/display_folded = true
+
+[node name="Area2D" type="Area2D" parent="destroyers"]
+
+editor/display_folded = true
+transform/pos = Vector2( -27.2075, 287.039 )
+input/pickable = true
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision/layers = 2
+collision/mask = 2
+script/script = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="destroyers/Area2D"]
+
+shape = SubResource( 3 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Area2D1" type="Area2D" parent="destroyers"]
+
+editor/display_folded = true
+transform/pos = Vector2( 844.793, 287.039 )
+input/pickable = true
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision/layers = 2
+collision/mask = 2
+script/script = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="destroyers/Area2D1"]
+
+shape = SubResource( 3 )
+trigger = false
+_update_shape_index = 0
+
+[node name="display" type="Node" parent="."]
+
+script/script = ExtResource( 7 )
+time_scale = 5.0
+minutes = 3
+seconds = 30
+
+[node name="sec_unit" type="Sprite" parent="display"]
+
+transform/pos = Vector2( 973.856, 72.8359 )
+transform/scale = Vector2( 1.42982, 1.42982 )
+texture = ExtResource( 8 )
+hframes = 10
+region_rect = Rect2( 0, 0, 21, 37 )
+
+[node name="sec_ten" type="Sprite" parent="display"]
+
+transform/pos = Vector2( 944.896, 72.8359 )
+transform/scale = Vector2( 1.42982, 1.42982 )
+texture = ExtResource( 8 )
+hframes = 10
+region_rect = Rect2( 0, 0, 21, 37 )
+
+[node name="min_unit" type="Sprite" parent="display"]
+
+transform/pos = Vector2( 902.483, 72.8359 )
+transform/scale = Vector2( 1.42982, 1.42982 )
+texture = ExtResource( 8 )
+hframes = 10
+region_rect = Rect2( 0, 0, 21, 37 )
+
+[node name="min_ten" type="Sprite" parent="display"]
+
+transform/pos = Vector2( 873.222, 72.8359 )
+transform/scale = Vector2( 1.42982, 1.42982 )
+texture = ExtResource( 8 )
+hframes = 10
+region_rect = Rect2( 0, 0, 21, 37 )
+
+
