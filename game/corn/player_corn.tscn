@@ -12,7 +12,7 @@ pop_color = Color( 0.804688, 0.191742, 0.191742, 1 )
 speed = 10
 jump_impulse = 50
 max_jump_duration = 0.5
-ground_test_distance = 100
+ground_test_distance = 20
 
 [node name="Sprite" parent="."]
 

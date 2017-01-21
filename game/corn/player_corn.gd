@@ -5,7 +5,7 @@ export(int) var speed = 10
 export(int) var jump_impulse = 50
 export(float, 0.1, 2.0, 0.1) var max_jump_duration = 0.5
 
-export(int, 0, 1000) var ground_test_distance = 2
+export(int, 0, 1000) var ground_test_distance = 1
 
 var movement
 
