@@ -1,1552 +1,248 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=2 format=1]
 
 [ext_resource path="res://corn/corn.tscn" type="PackedScene" id=1]
-[ext_resource path="res://corn/corn.gd" type="Script" id=2]
-
-[sub_resource type="CapsuleShape2D" id=1]
-
-custom_solver_bias = 0.0
-radius = 11.8021
-height = 6.74344
 
 [node name="corns" type="Node"]
 
-editor/display_folded = true
+[node name="corn" parent="." instance=ExtResource( 1 )]
 
-[node name="corn" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+transform/pos = Vector2( 389.604, 326.785 )
 
-transform/pos = Vector2( 389.604, 315.785 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
-
-[node name="corn7" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn7" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 538.831, 204.242 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn8" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn8" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 407.901, 399.032 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn6" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn6" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 68.5404, 332.365 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn7 8" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn7 8" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 217.767, 220.822 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn79" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn79" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 86.8374, 415.612 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn2" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn2" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 472.508, 320.307 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn7 3" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn7 3" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 621.734, 208.764 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn74" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn74" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 490.805, 403.554 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn6 2" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn6 2" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 151.444, 336.887 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn63" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn63" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 300.671, 225.344 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn65 2" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn65 2" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 169.741, 420.135 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn1" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn1" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 448.391, 365.527 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn7 4" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn7 4" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 597.617, 253.984 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn75" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn75" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 466.688, 448.774 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn6 3" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn6 3" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 127.327, 382.108 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn64" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn64" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 276.553, 270.564 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn65" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn65" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 145.624, 465.355 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn2 2" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn2 2" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 531.294, 370.049 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn24 2" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn24 2" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 680.521, 258.506 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn243" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn243" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 549.591, 453.296 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn23" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn23" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 210.231, 386.63 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn24" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn24" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 359.458, 275.086 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn25" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn25" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 228.528, 469.877 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn 2" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn 2" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 223.797, 332.365 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn7 6" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn7 6" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 373.024, 220.822 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn77" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn77" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 242.094, 415.612 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn5 3" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn5 3" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 306.701, 336.887 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn54" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn54" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 455.927, 225.344 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn56" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn56" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 324.998, 420.135 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn3" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn3" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 282.583, 382.108 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn7 9" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn7 9" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 431.81, 270.564 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn710" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn710" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 300.88, 465.355 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn5 4" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn5 4" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 365.487, 386.63 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn55" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn55" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 514.713, 275.086 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn56 3" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn56 3" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 383.784, 469.877 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn 3" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn 3" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 526.772, 333.873 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn7 5" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn9 3" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 202.649, 279.852 )
+
+[node name="corn7 5" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 675.999, 222.329 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn76" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn711 3" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 572.869, 81.1389 )
+
+[node name="corn76" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 545.069, 417.12 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn5 2" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn80 3" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 214.807, 143.334 )
+
+[node name="corn5 2" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 609.676, 338.395 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn53" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn57" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 202.066, 108.808 )
+
+[node name="corn53" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 758.902, 226.851 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn56 2" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn57 2" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 655.772, 85.6609 )
+
+[node name="corn56 2" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 627.973, 421.642 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn4" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn563" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 297.711, 147.856 )
+
+[node name="corn4" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 585.558, 383.615 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn7 2" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn9 2" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 141.116, 82.8188 )
+
+[node name="corn7 2" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 734.785, 272.072 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn73" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn711 2" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 631.655, 130.882 )
+
+[node name="corn73" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 603.855, 466.862 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn5" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn80" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 253.949, 191.848 )
+
+[node name="corn5" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 668.462, 388.137 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn7 7" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn9" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 379.943, 118.034 )
+
+[node name="corn7 7" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 737.8, 351.961 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
 
-[node name="corn78" type="RigidBody2D" parent="." instance=ExtResource( 1 )]
+[node name="corn711" parent="." instance=ExtResource( 1 )]
 
-transform/pos = Vector2( 686.759, 471.384 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-mode = 0
-mass = 10.0
-friction = 1.0
-bounce = 0.3
-gravity_scale = 5.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-velocity/linear = Vector2( 0, 0 )
-velocity/angular = 0.0
-damp_override/linear = -1.0
-damp_override/angular = -1.0
-script/script = ExtResource( 2 )
-health = 10.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
-diff_anims = 5
-min_pitch_ratio = 0.5
-delta_pitch_ratio = 0.5
+transform/pos = Vector2( 131.297, 178.85 )
+
+[node name="corn78" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 686.759, 465.384 )
+
+[node name="corn80 2" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 466.994, 135.122 )
+transform/scale = Vector2( 1, 1 )
 
 
