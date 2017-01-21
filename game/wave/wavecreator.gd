@@ -7,6 +7,7 @@ export var timetohard = 20
 var acctime = 0
 var totaltime = 0
 var height
+export var leftWay = false
 
 func _ready():
 	set_fixed_process(true)
@@ -23,6 +24,10 @@ func _fixed_process(delta):
 	if(acctime > timespawn):
 		var newWave
 		newWave = wave.instance()
-		newWave.set_pos(Vector2(50, rand_range(0.2*height, 0.8*height)))
+		if(leftWay):
+			newWave.left = true
+			newWave.set_pos(Vector2(700, rand_range(0.2*height, 0.8*height)))
+		else:
+			newWave.set_pos(Vector2(50, rand_range(0.2*height, 0.8*height)))
 		get_tree().get_root().add_child(newWave)
 		acctime = 0

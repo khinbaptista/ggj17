@@ -22,6 +22,7 @@ collision/mask = 0
 collision/margin = 0.08
 script/script = ExtResource( 1 )
 speed = 500
+left = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
