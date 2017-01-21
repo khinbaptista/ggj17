@@ -1,6 +1,7 @@
 extends Node2D
 
 var wave
+var wave2
 export var timespawn = 5
 export var timetohard = 20
 var acctime = 0
@@ -11,6 +12,7 @@ func _ready():
 	set_fixed_process(true)
 	height = get_viewport().get_rect().size.y
 	wave = preload("res://wave/wave.tscn")
+	wave2 = preload("res://wave/wave2.tscn")
 
 func _fixed_process(delta):
 	acctime += delta
@@ -19,7 +21,11 @@ func _fixed_process(delta):
 		timespawn = timespawn / 2
 		totaltime = 0
 	if(acctime > timespawn):
-		var newWave = wave.instance()
+		var newWave
+		if(rand_range(0, 10) >= 5):
+			newWave = wave.instance()
+		else:
+			newWave = wave2.instance()
 		newWave.set_pos(Vector2(50, rand_range(0.2*height, 0.8*height)))
 		get_tree().get_root().add_child(newWave)
 		acctime = 0
