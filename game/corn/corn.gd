@@ -26,7 +26,8 @@ func hit(damage):
 	if health <= 0:
 		health = 0
 		get_node("Sprite").set_modulate(Color(1, 1, 1))
-		emit_signal("popped")
+		changeAnim("Stage 5")
+		anim.connect("finished", self, "emit_signal", ["popped"])
 
 func selectAnim():
 	var rate = max_health - health

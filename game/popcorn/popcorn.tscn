@@ -1,11 +1,12 @@
 [gd_scene load_steps=3 format=1]
 
-[ext_resource path="res://corn/corn_placeholder.png" type="Texture" id=1]
+[ext_resource path="res://corn/npc corn.png" type="Texture" id=1]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="CapsuleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 32.8664
+radius = 26.0813
+height = 10.8906
 
 [node name="popcorn" type="RigidBody2D"]
 
@@ -19,7 +20,7 @@ mode = 0
 mass = 1.0
 friction = 1.0
 bounce = 0.0
-gravity_scale = 1.0
+gravity_scale = 2.0
 custom_integrator = false
 continuous_cd = 0
 contacts_reported = 0
@@ -33,11 +34,15 @@ damp_override/angular = -1.0
 
 [node name="Sprite" type="Sprite" parent="."]
 
-transform/scale = Vector2( 2, 2 )
+transform/pos = Vector2( -0.104793, -0.104793 )
+transform/scale = Vector2( 2.20958, 2.20958 )
 texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 95, 174, 29, 29 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
+visibility/visible = false
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0

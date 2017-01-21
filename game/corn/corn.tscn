@@ -10,10 +10,11 @@
 [ext_resource path="res://corn/stage0.tres" type="Animation" id=8]
 [ext_resource path="res://corn/corn_explosion.gd" type="Script" id=9]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="CapsuleShape2D" id=3]
 
 custom_solver_bias = 0.0
-radius = 16.1736
+radius = 11.8021
+height = 6.74344
 
 [sub_resource type="CircleShape2D" id=2]
 
@@ -23,7 +24,7 @@ radius = 77.7416
 [node name="corn" type="RigidBody2D"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -44,16 +45,18 @@ velocity/angular = 0.0
 damp_override/linear = -1.0
 damp_override/angular = -1.0
 script/script = ExtResource( 1 )
-health = 100.0
+health = 50.0
 start_color = Color( 0.596078, 0.596078, 0.596078, 1 )
 pop_color = Color( 0.53125, 0.153564, 0.153564, 1 )
 diff_anims = 5
 
 [node name="Sprite" type="Sprite" parent="."]
 
+editor/display_folded = true
 texture = ExtResource( 2 )
 vframes = 7
 hframes = 3
+frame = 4
 modulate = Color( 0.597656, 0.597656, 0.597656, 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
@@ -75,7 +78,7 @@ autoplay = "Stage 0"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
 visibility/visible = false
-shape = SubResource( 1 )
+shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 

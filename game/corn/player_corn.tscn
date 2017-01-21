@@ -15,6 +15,12 @@ ground_test_distance = 100
 
 [node name="Sprite" parent="."]
 
+transform/pos = Vector2( 0, -0.114 )
+transform/scale = Vector2( 1.228, 1.228 )
 modulate = Color( 0.867922, 0.902344, 0.461746, 1 )
+
+[node name="CollisionShape2D" parent="."]
+
+visibility/visible = false
 
 
