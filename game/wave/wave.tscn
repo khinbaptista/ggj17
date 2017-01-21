@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://wave/wave.gd" type="Script" id=1]
-[ext_resource path="res://wave/wave.png" type="Texture" id=2]
+[ext_resource path="res://wave/wavebigger.png" type="Texture" id=2]
 [ext_resource path="res://wave/wave.tres" type="Animation" id=3]
 [ext_resource path="res://wave/heat.gd" type="Script" id=4]
 
@@ -54,7 +54,7 @@ autoplay = "wave"
 [node name="Sprite1" type="Sprite" parent="."]
 
 editor/display_folded = true
-transform/pos = Vector2( 17, 0 )
+transform/pos = Vector2( 18.1975, 0 )
 transform/scale = Vector2( 1.99567, 1.99567 )
 texture = ExtResource( 2 )
 hframes = 4
