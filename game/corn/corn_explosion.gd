@@ -11,6 +11,7 @@ func _ready():
 	radius = get_node("CollisionShape2D").get_shape().get_radius()
 
 func explode():
+	get_node("../SamplePlayer").play("pop")
 	var bodies_inside = get_overlapping_bodies()
 	for body in bodies_inside:
 		if(body extends RigidBody2D):
