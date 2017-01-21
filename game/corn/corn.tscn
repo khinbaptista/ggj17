@@ -7,24 +7,13 @@
 [ext_resource path="res://corn/stage3.tres" type="Animation" id=5]
 [ext_resource path="res://corn/stage4.tres" type="Animation" id=6]
 [ext_resource path="res://corn/stage5.tres" type="Animation" id=7]
-[ext_resource path="res://corn/corn_explosion.gd" type="Script" id=8]
+[ext_resource path="res://corn/stage0.tres" type="Animation" id=8]
+[ext_resource path="res://corn/corn_explosion.gd" type="Script" id=9]
 
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 16.1736
-
-[sub_resource type="Animation" id=2]
-
-resource/name = "Stage 0"
-length = 0.8
-loop = false
-step = 0.2
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/imported = false
-tracks/0/keys = { "times":FloatArray( 0, 0.2, 0.4, 0.6 ), "transitions":FloatArray( 1, 1, 1, 1 ), "update":1, "values":[ 0, 1, 2, 1 ] }
 
 [sub_resource type="CircleShape2D" id=3]
 
@@ -57,30 +46,30 @@ damp_override/angular = -1.0
 script/script = ExtResource( 1 )
 health = 100.0
 start_color = Color( 1, 1, 1, 1 )
-pop_color = Color( 0.9375, 0.340576, 0.340576, 1 )
+pop_color = Color( 1, 1, 1, 1 )
+diff_anims = 5
 
 [node name="Sprite" type="Sprite" parent="."]
 
 texture = ExtResource( 2 )
 vframes = 7
 hframes = 3
-frame = 20
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
 
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-"anims/Stage 0" = SubResource( 2 )
 "anims/Stage 1" = ExtResource( 3 )
 "anims/Stage 2" = ExtResource( 4 )
 "anims/Stage 3" = ExtResource( 5 )
 "anims/Stage 4" = ExtResource( 6 )
 "anims/Stage 5" = ExtResource( 7 )
+anims/stage0 = ExtResource( 8 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
-autoplay = ""
+autoplay = "Stage 0"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
@@ -99,7 +88,7 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
-script/script = ExtResource( 8 )
+script/script = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="explosion"]
 
