@@ -8,6 +8,7 @@ func _ready():
 	
 func _fixed_process(delta):
 	var move_dir = changeDir().normalized()
+	set_rot(Vector2(1, 0).angle_to(get_travel()))
 	var motion = move_dir * speed * delta
 	move(motion)
 	

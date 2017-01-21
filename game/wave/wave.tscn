@@ -5,11 +5,10 @@
 [ext_resource path="res://wave/wave.tres" type="Animation" id=3]
 [ext_resource path="res://wave/heat.gd" type="Script" id=4]
 
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 70.0362
-height = 444.077
+extents = Vector2( 122.622, 45.7939 )
 
 [node name="wave" type="KinematicBody2D"]
 
