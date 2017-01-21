@@ -1,30 +1,35 @@
 extends Node
 
+var player_node
+var player_pos
+
 func _ready():
-	hideKernels()
-	
-	get_node("menu/popcorn").connect("microwave_start", self, "on_start")
-	
-func hideKernels():
-		# Pause
+	# Pause
 	get_tree().set_pause(true)
 	
+	setHideKernels(true)
+	get_node("menu/popcorn").connect("microwave_start", self, "on_start")
+	
+	player_node = get_node("player_corn")
+	player_pos = player_node.get_pos()
+	
+func setHideKernels(value):
 	# Hide kernels
 	var kernels = get_node("corns").get_children()
 	for kernel in kernels:
-		kernel.set_hidden(true)
+		kernel.set_hidden(value)
 
 func on_start():
 	# Unpause
 	get_tree().set_pause(false)
 	
-	# Reveal kernels
-	var kernels = get_node("corns").get_children()
-	for kernel in kernels:
-		kernel.set_hidden(false)
+	setHideKernels(false)
 	
 	# Start display
-	get_node("display").start_display()
+	var display = get_node("display")
+	display.minutes = 3
+	display.seconds = 30
+	display.start_display()
 	
 	# Hide other elements
 	get_node("menu/quit/door").hide()
@@ -34,7 +39,7 @@ func on_start():
 	get_node("menu/popcorn").set_disabled(true)
 	get_node("menu/credits").set_disabled(true)
 	
-	get_node("player_corn").connect("popped", self, "on_game_over")
+	player_node.connect("popped", self, "on_game_over")
 	
 func on_game_over():
 	# Pause
@@ -51,16 +56,17 @@ func on_game_over():
 	node_collection.set_name("corns")
 	add_child(node_collection)
 	
-	get_node("player_corn").queue_free()
 	var player_res = preload("res://corn/player_corn.tscn")
-	var player_instance = player_res.instance()
-	player_instance.set_name("player_corn")
-	add_child(player_instance)
-	player_instance.set_global_pos(Vector2(121.922997, 282.2609))
+	player_node = player_res.instance()
+	#player_node.set_name("player_corn")
+	
+	add_child(player_node)
+	player_node.set_global_pos(player_pos)
+	#player_node.connect("popped", self, "on_game_over")
 	
 	# Reveal other elements
 	get_node("menu/quit/door").show()
 	get_node("menu/Sprite").show()
 	
 	# Hide again
-	hideKernels()
+	setHideKernels(true)

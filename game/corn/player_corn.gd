@@ -36,11 +36,11 @@ func _fixed_process(delta):
 		apply_impulse(Vector2(), Vector2(0, -jump_impulse))
 	else:
 		jumping = false
-		jump_timer = 0.0
 
 func _input(event):
 	if event.is_action_pressed("jump") and not event.is_echo() and not jumping and grounded:
 		jumping = true
+		jump_timer = 0.0
 		print("new jump")
 
 func _integrate_forces(state):
