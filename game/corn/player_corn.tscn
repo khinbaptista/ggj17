@@ -6,6 +6,8 @@
 [node name="player_corn" instance=ExtResource( 1 )]
 
 script/script = ExtResource( 2 )
+start_color = Color( 1, 1, 1, 1 )
+pop_color = Color( 0.804688, 0.191742, 0.191742, 1 )
 speed = 10
 jump_impulse = 50
 max_jump_duration = 0.5

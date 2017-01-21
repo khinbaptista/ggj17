@@ -16,6 +16,8 @@ func _ready():
 	anim = get_node("Sprite/AnimationPlayer")
 
 func hit(damage):
+	if health <= 0: return
+	
 	health -= damage
 	get_node("Sprite").set_modulate(start_color.linear_interpolate(pop_color, (max_health - health) / max_health))
 	
@@ -23,6 +25,7 @@ func hit(damage):
 	
 	if health <= 0:
 		health = 0
+		get_node("Sprite").set_modulate(Color(1, 1, 1))
 		emit_signal("popped")
 
 func selectAnim():

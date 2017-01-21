@@ -105,16 +105,24 @@ _update_shape_index = 0
 [node name="player_corn" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 470.224, 283.608 )
+pop_color = Color( 0.760784, 0.172549, 0.172549, 1 )
 jump_impulse = 200
 max_jump_duration = 0.4
 
 [node name="corns" type="Node2D" parent="."]
 
-editor/display_folded = true
-
 [node name="corn" parent="corns" instance=ExtResource( 2 )]
 
+editor/display_folded = true
 transform/pos = Vector2( 320.44, 219.765 )
+
+[node name="Sprite" parent="corns/corn"]
+
+editor/display_folded = true
+
+[node name="explosion" parent="corns/corn"]
+
+editor/display_folded = true
 
 [node name="corn17 8" parent="corns" instance=ExtResource( 2 )]
 
@@ -251,3 +259,4 @@ transform/pos = Vector2( 126.457, 480.046 )
 [node name="wavecreator" parent="." instance=ExtResource( 3 )]
 
 
+[editable path="corns/corn"]
