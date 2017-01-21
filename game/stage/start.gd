@@ -1,8 +1,6 @@
 extends TextureButton
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
+signal microwave_start
 
 func _ready():
 	connect("button_down", self, "startRestart")
@@ -11,11 +9,16 @@ func _ready():
 func startRestart():
 	var sample_player = get_node("../SamplePlayer")
 	var music = get_node("../Music")
+	
 	sample_player.play("ping")
 	while sample_player.is_active():
 		yield(get_tree(), "idle_frame")
+	
+	emit_signal("microwave_start")
+	
 	sample_player.play("microwave_starting")
 	while sample_player.is_active():
 		yield(get_tree(), "idle_frame")
+	
 	sample_player.play("microwave_noise")
 	music.play("pipo")

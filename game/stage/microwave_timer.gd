@@ -17,9 +17,9 @@ func _ready():
 	sec_unit = get_node("sec_unit")
 	sec_ten = get_node("sec_ten")
 	min_unit = get_node("min_unit")
-	
+
+func start_display():
 	timer = Timer.new()
-	#timer.set_wait_timer(((minutes * 60) + seconds) / time_scale)
 	timer.set_wait_time(1.0 / time_scale)
 	timer.set_one_shot(false)
 	timer.connect("timeout", self, "elapsed_second")
