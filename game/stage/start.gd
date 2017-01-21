@@ -9,4 +9,11 @@ func _ready():
 	pass
 
 func startRestart():
-	get_node("../SamplePlayer").play("ping")
+	var sample_player = get_node("../SamplePlayer")
+	sample_player.play("ping")
+	while sample_player.is_active():
+		yield(get_tree(), "idle_frame")
+	sample_player.play("microwave_starting")
+	while sample_player.is_active():
+		yield(get_tree(), "idle_frame")
+	sample_player.play("microwave_noise")
