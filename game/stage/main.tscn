@@ -1,21 +1,16 @@
-[gd_scene load_steps=22 format=1]
+[gd_scene load_steps=17 format=1]
 
-[ext_resource path="res://MicrowaveWhite.png" type="Texture" id=1]
-[ext_resource path="res://MicrowaveBG.png" type="Texture" id=2]
-[ext_resource path="res://corn/corn.tscn" type="PackedScene" id=3]
-[ext_resource path="res://corn/player_corn.tscn" type="PackedScene" id=4]
-[ext_resource path="res://wave/wavecreator.tscn" type="PackedScene" id=5]
-[ext_resource path="res://wave/wave_destroyer.gd" type="Script" id=6]
-[ext_resource path="res://button.png" type="Texture" id=7]
-[ext_resource path="res://stage/start.gd" type="Script" id=8]
-[ext_resource path="res://stage/credits.gd" type="Script" id=9]
-[ext_resource path="res://stage/quit.gd" type="Script" id=10]
-[ext_resource path="res://corn/high-pitched_comemoration.wav" type="Sample" id=11]
-[ext_resource path="res://microwave_noise.smp" type="Sample" id=12]
-[ext_resource path="res://corn/microwave_starting.wav" type="Sample" id=13]
-[ext_resource path="res://corn/ping.wav" type="Sample" id=14]
-[ext_resource path="res://corn/118655__pyzaist__yay - 8-bit.wav" type="Sample" id=15]
-[ext_resource path="res://Pipo_InterludoBeta.smp" type="Sample" id=16]
+[ext_resource path="res://stage/menu.tscn" type="PackedScene" id=1]
+[ext_resource path="res://corn/corn.tscn" type="PackedScene" id=2]
+[ext_resource path="res://corn/player_corn.tscn" type="PackedScene" id=3]
+[ext_resource path="res://wave/wavecreator.tscn" type="PackedScene" id=4]
+[ext_resource path="res://wave/wave_destroyer.gd" type="Script" id=5]
+[ext_resource path="res://corn/high-pitched_comemoration.wav" type="Sample" id=6]
+[ext_resource path="res://microwave_noise.smp" type="Sample" id=7]
+[ext_resource path="res://corn/microwave_starting.wav" type="Sample" id=8]
+[ext_resource path="res://corn/ping.wav" type="Sample" id=9]
+[ext_resource path="res://corn/118655__pyzaist__yay - 8-bit.wav" type="Sample" id=10]
+[ext_resource path="res://Pipo_InterludoBeta.smp" type="Sample" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -34,29 +29,19 @@ extents = Vector2( 10, 346.321 )
 
 [sub_resource type="SampleLibrary" id=4]
 
-samples/comemoration = { "db":0.0, "pitch":1.0, "sample":ExtResource( 11 ) }
-samples/microwave_noise = { "db":24.0, "pitch":1.0, "sample":ExtResource( 12 ) }
-samples/microwave_starting = { "db":24.0, "pitch":1.0, "sample":ExtResource( 13 ) }
-samples/ping = { "db":24.0, "pitch":1.0, "sample":ExtResource( 14 ) }
-samples/yay = { "db":0.0, "pitch":1.0, "sample":ExtResource( 15 ) }
+samples/comemoration = { "db":0.0, "pitch":1.0, "sample":ExtResource( 6 ) }
+samples/microwave_noise = { "db":24.0, "pitch":1.0, "sample":ExtResource( 7 ) }
+samples/microwave_starting = { "db":24.0, "pitch":1.0, "sample":ExtResource( 8 ) }
+samples/ping = { "db":24.0, "pitch":1.0, "sample":ExtResource( 9 ) }
+samples/yay = { "db":0.0, "pitch":1.0, "sample":ExtResource( 10 ) }
 
 [sub_resource type="SampleLibrary" id=5]
 
-samples/pipo = { "db":-15.0, "pitch":1.3, "sample":ExtResource( 16 ) }
+samples/pipo = { "db":-15.0, "pitch":1.3, "sample":ExtResource( 11 ) }
 
 [node name="main" type="Node"]
 
-[node name="MicrowaveWhite" type="Sprite" parent="."]
-
-transform/pos = Vector2( 515.057, 298.889 )
-transform/scale = Vector2( 1.44301, 1.47651 )
-texture = ExtResource( 1 )
-
-[node name="MicrowaveBG" type="Sprite" parent="."]
-
-transform/pos = Vector2( 413.919, 296.335 )
-transform/scale = Vector2( 4.18166, 4.17486 )
-texture = ExtResource( 2 )
+[node name="menu" parent="." instance=ExtResource( 1 )]
 
 [node name="walls" type="Node2D" parent="."]
 
@@ -153,295 +138,295 @@ _update_shape_index = 0
 
 editor/display_folded = true
 
-[node name="corn" parent="corns" instance=ExtResource( 3 )]
+[node name="corn" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 389.604, 315.785 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn7" parent="corns" instance=ExtResource( 3 )]
+[node name="corn7" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 538.831, 204.242 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn8" parent="corns" instance=ExtResource( 3 )]
+[node name="corn8" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 407.901, 399.032 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn6" parent="corns" instance=ExtResource( 3 )]
+[node name="corn6" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 68.5404, 332.365 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn7 8" parent="corns" instance=ExtResource( 3 )]
+[node name="corn7 8" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 217.767, 220.822 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn79" parent="corns" instance=ExtResource( 3 )]
+[node name="corn79" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 86.8374, 415.612 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn2" parent="corns" instance=ExtResource( 3 )]
+[node name="corn2" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 472.508, 320.307 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn7 3" parent="corns" instance=ExtResource( 3 )]
+[node name="corn7 3" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 621.734, 208.764 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn74" parent="corns" instance=ExtResource( 3 )]
+[node name="corn74" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 490.805, 403.554 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn6 2" parent="corns" instance=ExtResource( 3 )]
+[node name="corn6 2" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 151.444, 336.887 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn63" parent="corns" instance=ExtResource( 3 )]
+[node name="corn63" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 300.671, 225.344 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn65 2" parent="corns" instance=ExtResource( 3 )]
+[node name="corn65 2" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 169.741, 420.135 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn1" parent="corns" instance=ExtResource( 3 )]
+[node name="corn1" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 448.391, 365.527 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn7 4" parent="corns" instance=ExtResource( 3 )]
+[node name="corn7 4" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 597.617, 253.984 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn75" parent="corns" instance=ExtResource( 3 )]
+[node name="corn75" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 466.688, 448.774 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn6 3" parent="corns" instance=ExtResource( 3 )]
+[node name="corn6 3" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 127.327, 382.108 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn64" parent="corns" instance=ExtResource( 3 )]
+[node name="corn64" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 276.553, 270.564 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn65" parent="corns" instance=ExtResource( 3 )]
+[node name="corn65" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 145.624, 465.355 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn2 2" parent="corns" instance=ExtResource( 3 )]
+[node name="corn2 2" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 531.294, 370.049 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn24 2" parent="corns" instance=ExtResource( 3 )]
+[node name="corn24 2" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 680.521, 258.506 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn243" parent="corns" instance=ExtResource( 3 )]
+[node name="corn243" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 549.591, 453.296 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn23" parent="corns" instance=ExtResource( 3 )]
+[node name="corn23" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 210.231, 386.63 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn24" parent="corns" instance=ExtResource( 3 )]
+[node name="corn24" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 359.458, 275.086 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn25" parent="corns" instance=ExtResource( 3 )]
+[node name="corn25" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 228.528, 469.877 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn 2" parent="corns" instance=ExtResource( 3 )]
+[node name="corn 2" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 223.797, 332.365 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn7 6" parent="corns" instance=ExtResource( 3 )]
+[node name="corn7 6" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 373.024, 220.822 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn77" parent="corns" instance=ExtResource( 3 )]
+[node name="corn77" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 242.094, 415.612 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn5 3" parent="corns" instance=ExtResource( 3 )]
+[node name="corn5 3" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 306.701, 336.887 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn54" parent="corns" instance=ExtResource( 3 )]
+[node name="corn54" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 455.927, 225.344 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn56" parent="corns" instance=ExtResource( 3 )]
+[node name="corn56" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 324.998, 420.135 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn3" parent="corns" instance=ExtResource( 3 )]
+[node name="corn3" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 282.583, 382.108 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn7 9" parent="corns" instance=ExtResource( 3 )]
+[node name="corn7 9" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 431.81, 270.564 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn710" parent="corns" instance=ExtResource( 3 )]
+[node name="corn710" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 300.88, 465.355 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn5 4" parent="corns" instance=ExtResource( 3 )]
+[node name="corn5 4" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 365.487, 386.63 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn55" parent="corns" instance=ExtResource( 3 )]
+[node name="corn55" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 514.713, 275.086 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn56 3" parent="corns" instance=ExtResource( 3 )]
+[node name="corn56 3" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 383.784, 469.877 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn 3" parent="corns" instance=ExtResource( 3 )]
+[node name="corn 3" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 526.772, 333.873 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn7 5" parent="corns" instance=ExtResource( 3 )]
+[node name="corn7 5" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 675.999, 222.329 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn76" parent="corns" instance=ExtResource( 3 )]
+[node name="corn76" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 545.069, 417.12 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn5 2" parent="corns" instance=ExtResource( 3 )]
+[node name="corn5 2" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 609.676, 338.395 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn53" parent="corns" instance=ExtResource( 3 )]
+[node name="corn53" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 758.902, 226.851 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn56 2" parent="corns" instance=ExtResource( 3 )]
+[node name="corn56 2" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 627.973, 421.642 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn4" parent="corns" instance=ExtResource( 3 )]
+[node name="corn4" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 585.558, 383.615 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn7 2" parent="corns" instance=ExtResource( 3 )]
+[node name="corn7 2" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 734.785, 272.072 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn73" parent="corns" instance=ExtResource( 3 )]
+[node name="corn73" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 603.855, 466.862 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn5" parent="corns" instance=ExtResource( 3 )]
+[node name="corn5" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 668.462, 388.137 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn7 7" parent="corns" instance=ExtResource( 3 )]
+[node name="corn7 7" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 737.8, 351.961 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="corn78" parent="corns" instance=ExtResource( 3 )]
+[node name="corn78" parent="corns" instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 686.759, 471.384 )
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 
-[node name="player_corn" parent="." instance=ExtResource( 4 )]
+[node name="player_corn" parent="." instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 121.923, 282.261 )
 health = 50.0
@@ -449,7 +434,7 @@ min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
 jump_impulse = 200
 
-[node name="wavecreator" parent="." instance=ExtResource( 5 )]
+[node name="wavecreator" parent="." instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 47.7135, 65.8902 )
 leftWay = false
@@ -470,7 +455,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 collision/layers = 2
 collision/mask = 2
-script/script = ExtResource( 6 )
+script/script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="destroyers/Area2D"]
 
@@ -492,121 +477,13 @@ linear_damp = 0.1
 angular_damp = 1.0
 collision/layers = 2
 collision/mask = 2
-script/script = ExtResource( 6 )
+script/script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="destroyers/Area2D1"]
 
 shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
-
-[node name="popcorn" type="TextureButton" parent="."]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 846.0
-margin/top = 141.0
-margin/right = 1004.0
-margin/bottom = 177.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 7 )
-params/scale = Vector2( 1.5, 1.2 )
-script/script = ExtResource( 8 )
-
-[node name="Label" type="Label" parent="popcorn"]
-
-rect/scale = Vector2( 1.5, 1.5 )
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 105.0
-margin/bottom = 24.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "POPCORN"
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="credits" type="TextureButton" parent="."]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 846.0
-margin/top = 190.0
-margin/right = 1004.0
-margin/bottom = 226.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 7 )
-params/scale = Vector2( 1.5, 1.2 )
-script/script = ExtResource( 9 )
-
-[node name="Label1" type="Label" parent="credits"]
-
-rect/scale = Vector2( 1.5, 1.5 )
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 105.0
-margin/bottom = 24.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "CREDITS"
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="quit" type="TextureButton" parent="."]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 846.0
-margin/top = 238.0
-margin/right = 1004.0
-margin/bottom = 274.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 7 )
-params/scale = Vector2( 1.5, 1.2 )
-script/script = ExtResource( 10 )
-
-[node name="Label2" type="Label" parent="quit"]
-
-rect/scale = Vector2( 1.5, 1.5 )
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 105.0
-margin/bottom = 24.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "QUIT"
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
 [node name="SamplePlayer" type="SamplePlayer" parent="."]
 
@@ -642,7 +519,7 @@ default/reverb_room = 2
 default/reverb_send = 0.0
 default/chorus_send = 0.0
 
-[node name="wavecreator 2" parent="." instance=ExtResource( 5 )]
+[node name="wavecreator 2" parent="." instance=ExtResource( 4 )]
 
 leftWay = true
 
