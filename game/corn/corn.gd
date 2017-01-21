@@ -34,13 +34,13 @@ func selectAnim():
 	var interval = max_health / diff_anims
 	if(rate >= 0 && rate < interval):
 		changeAnim("stage0")
-	elif(rate > interval && rate < 2*interval):
+	elif(rate >= interval && rate < 2*interval):
 		changeAnim("Stage 1")
-	elif(rate > 2*interval && rate < 3*interval):
+	elif(rate >= 2*interval && rate < 3*interval):
 		changeAnim("Stage 2")
-	elif(rate > 3*interval && rate < 4*interval):
+	elif(rate >= 3*interval && rate < 4*interval):
 		changeAnim("Stage 3")
-	elif(rate > 4*interval && rate < 5*interval):
+	elif(rate >= 4*interval && rate < 5*interval):
 		changeAnim("Stage 4")
 
 func changeAnim(animName):

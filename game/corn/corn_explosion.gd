@@ -1,6 +1,6 @@
 extends Area2D
 
-var explosion_power = 10000
+var explosion_power = 5000
 var radius
 
 var popcorn_res
