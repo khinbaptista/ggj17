@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export(int) var speed = 300
+export(int) var speed = 500
 
 func _ready():
 	set_fixed_process(true)
