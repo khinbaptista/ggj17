@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=1]
+[gd_scene load_steps=22 format=1]
 
 [ext_resource path="res://MicrowaveWhite.png" type="Texture" id=1]
 [ext_resource path="res://MicrowaveBG.png" type="Texture" id=2]
@@ -7,14 +7,16 @@
 [ext_resource path="res://wave/wavecreator.tscn" type="PackedScene" id=5]
 [ext_resource path="res://wave/wave_destroyer.gd" type="Script" id=6]
 [ext_resource path="res://button.png" type="Texture" id=7]
-[ext_resource path="res://start.gd" type="Script" id=8]
-[ext_resource path="res://corn/118655__pyzaist__yay - 8-bit.wav" type="Sample" id=9]
-[ext_resource path="res://corn/341247__jeremysykes__jump01.wav" type="Sample" id=10]
-[ext_resource path="res://corn/66393__110110010__bottle-pop.wav" type="Sample" id=11]
-[ext_resource path="res://corn/high-pitched_comemoration.wav" type="Sample" id=12]
-[ext_resource path="res://corn/microwave_noise.wav" type="Sample" id=13]
-[ext_resource path="res://corn/microwave_starting.wav" type="Sample" id=14]
-[ext_resource path="res://corn/ping.wav" type="Sample" id=15]
+[ext_resource path="res://stage/start.gd" type="Script" id=8]
+[ext_resource path="res://stage/credits.gd" type="Script" id=9]
+[ext_resource path="res://stage/quit.gd" type="Script" id=10]
+[ext_resource path="res://corn/118655__pyzaist__yay - 8-bit.wav" type="Sample" id=11]
+[ext_resource path="res://corn/341247__jeremysykes__jump01.wav" type="Sample" id=12]
+[ext_resource path="res://corn/66393__110110010__bottle-pop.wav" type="Sample" id=13]
+[ext_resource path="res://corn/high-pitched_comemoration.wav" type="Sample" id=14]
+[ext_resource path="res://corn/microwave_noise.wav" type="Sample" id=15]
+[ext_resource path="res://corn/microwave_starting.wav" type="Sample" id=16]
+[ext_resource path="res://corn/ping.wav" type="Sample" id=17]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -33,13 +35,13 @@ extents = Vector2( 10, 346.321 )
 
 [sub_resource type="SampleLibrary" id=4]
 
-"samples/118655__pyzaist__yay - 8-bit" = { "db":0.0, "pitch":1.0, "sample":ExtResource( 9 ) }
-samples/341247__jeremysykes__jump01 = { "db":0.0, "pitch":1.0, "sample":ExtResource( 10 ) }
-samples/66393__110110010__bottle-pop = { "db":0.0, "pitch":1.0, "sample":ExtResource( 11 ) }
-samples/high-pitched_comemoration = { "db":0.0, "pitch":1.0, "sample":ExtResource( 12 ) }
-samples/microwave_noise = { "db":0.0, "pitch":1.0, "sample":ExtResource( 13 ) }
-samples/microwave_starting = { "db":0.0, "pitch":1.0, "sample":ExtResource( 14 ) }
-samples/ping = { "db":24.0, "pitch":1.0, "sample":ExtResource( 15 ) }
+"samples/118655__pyzaist__yay - 8-bit" = { "db":0.0, "pitch":1.0, "sample":ExtResource( 11 ) }
+samples/341247__jeremysykes__jump01 = { "db":0.0, "pitch":1.0, "sample":ExtResource( 12 ) }
+samples/66393__110110010__bottle-pop = { "db":0.0, "pitch":1.0, "sample":ExtResource( 13 ) }
+samples/high-pitched_comemoration = { "db":0.0, "pitch":1.0, "sample":ExtResource( 14 ) }
+samples/microwave_noise = { "db":0.0, "pitch":1.0, "sample":ExtResource( 15 ) }
+samples/microwave_starting = { "db":0.0, "pitch":1.0, "sample":ExtResource( 16 ) }
+samples/ping = { "db":24.0, "pitch":1.0, "sample":ExtResource( 17 ) }
 
 [node name="main" type="Node"]
 
@@ -404,9 +406,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 844.0
+margin/left = 846.0
 margin/top = 141.0
-margin/right = 1002.0
+margin/right = 1004.0
 margin/bottom = 177.0
 toggle_mode = false
 enabled_focus_mode = 2
@@ -440,15 +442,35 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 844.0
+margin/left = 846.0
 margin/top = 190.0
-margin/right = 1002.0
+margin/right = 1004.0
 margin/bottom = 226.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 textures/normal = ExtResource( 7 )
 params/scale = Vector2( 1.5, 1.2 )
+script/script = ExtResource( 9 )
+
+[node name="Label1" type="Label" parent="TextureButton1"]
+
+rect/scale = Vector2( 1.5, 1.5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 105.0
+margin/bottom = 24.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "CREDITS"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 [node name="TextureButton2" type="TextureButton" parent="."]
 
@@ -456,15 +478,35 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 844.0
+margin/left = 846.0
 margin/top = 238.0
-margin/right = 1002.0
+margin/right = 1004.0
 margin/bottom = 274.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 textures/normal = ExtResource( 7 )
 params/scale = Vector2( 1.5, 1.2 )
+script/script = ExtResource( 10 )
+
+[node name="Label2" type="Label" parent="TextureButton2"]
+
+rect/scale = Vector2( 1.5, 1.5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 105.0
+margin/bottom = 24.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "QUIT"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 [node name="SamplePlayer" type="SamplePlayer" parent="."]
 

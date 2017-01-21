@@ -5,8 +5,8 @@ extends TextureButton
 # var b = "textvar"
 
 func _ready():
-	connect("pressed", self, "startRestart")
+	connect("button_down", self, "quit")
 	pass
 
-func startRestart():
+func quit():
 	get_node("../SamplePlayer").play("ping")
