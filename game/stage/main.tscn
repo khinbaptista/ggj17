@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=1]
+[gd_scene load_steps=15 format=1]
 
 [ext_resource path="res://stage/main.gd" type="Script" id=1]
 [ext_resource path="res://stage/menu.tscn" type="PackedScene" id=2]
@@ -6,14 +6,10 @@
 [ext_resource path="res://corn/player_corn.tscn" type="PackedScene" id=4]
 [ext_resource path="res://wave/wavecreator.tscn" type="PackedScene" id=5]
 [ext_resource path="res://wave/wave_destroyer.gd" type="Script" id=6]
-[ext_resource path="res://corn/high-pitched_comemoration.wav" type="Sample" id=7]
-[ext_resource path="res://microwave_noise.smp" type="Sample" id=8]
-[ext_resource path="res://corn/microwave_starting.wav" type="Sample" id=9]
-[ext_resource path="res://corn/ping.wav" type="Sample" id=10]
-[ext_resource path="res://corn/118655__pyzaist__yay - 8-bit.wav" type="Sample" id=11]
-[ext_resource path="res://Pipo_InterludoBeta.smp" type="Sample" id=12]
-[ext_resource path="res://stage/display/display.tscn" type="PackedScene" id=13]
-[ext_resource path="res://corn/corn_collection.tscn" type="PackedScene" id=14]
+[ext_resource path="res://stage/main_sampleplayer.tres" type="SampleLibrary" id=7]
+[ext_resource path="res://Pipo_InterludoBeta.smp" type="Sample" id=8]
+[ext_resource path="res://stage/display/display.tscn" type="PackedScene" id=9]
+[ext_resource path="res://corn/corn_collection.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -30,17 +26,9 @@ extents = Vector2( 10, 271.293 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 346.321 )
 
-[sub_resource type="SampleLibrary" id=4]
-
-samples/comemoration = { "db":0.0, "pitch":1.0, "sample":ExtResource( 7 ) }
-samples/microwave_noise = { "db":24.0, "pitch":1.0, "sample":ExtResource( 8 ) }
-samples/microwave_starting = { "db":24.0, "pitch":1.0, "sample":ExtResource( 9 ) }
-samples/ping = { "db":24.0, "pitch":1.0, "sample":ExtResource( 10 ) }
-samples/yay = { "db":0.0, "pitch":1.0, "sample":ExtResource( 11 ) }
-
 [sub_resource type="SampleLibrary" id=5]
 
-samples/pipo = { "db":-15.0, "pitch":1.3, "sample":ExtResource( 12 ) }
+samples/pipo = { "db":-15.0, "pitch":1.3, "sample":ExtResource( 8 ) }
 
 [node name="main" type="Node"]
 
@@ -49,7 +37,6 @@ script/script = ExtResource( 1 )
 [node name="menu" parent="." instance=ExtResource( 2 )]
 
 process/pause_mode = 2
-editor/display_folded = true
 
 [node name="Sprite" parent="menu"]
 
@@ -218,7 +205,7 @@ _update_shape_index = 0
 [node name="SamplePlayer" type="SamplePlayer" parent="."]
 
 config/polyphony = 1
-config/samples = SubResource( 4 )
+config/samples = ExtResource( 7 )
 default/volume_db = 0.0
 default/pitch_scale = 1.0
 default/pan = 0.0
@@ -253,11 +240,11 @@ default/chorus_send = 0.0
 
 leftWay = true
 
-[node name="display" parent="." instance=ExtResource( 13 )]
+[node name="display" parent="." instance=ExtResource( 9 )]
 
 time_scale = 2.0
 
-[node name="corns" parent="." instance=ExtResource( 14 )]
+[node name="corns" parent="." instance=ExtResource( 10 )]
 
 
 [editable path="menu"]

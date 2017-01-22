@@ -51,7 +51,7 @@ func on_start():
 	
 func on_game_over():
 	# Pause
-	get_tree().set_pause(true)
+	get_tree().call_deferred("set_pause", true)
 	
 	# Enable buttons
 	get_node("menu/popcorn").set_disabled(false)
@@ -94,5 +94,5 @@ func on_player_win():
 	on_game_over()
 
 func stop_sounds():
-	get_node("SamplePlayer").stop_all()
+	get_node("menu/SamplePlayer").stop_all()
 	get_node("Music").stop_all()

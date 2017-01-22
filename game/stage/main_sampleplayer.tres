@@ -1,16 +1,16 @@
 [gd_resource type="SampleLibrary" load_steps=6 format=1]
 
 [ext_resource path="res://corn/high-pitched_comemoration.wav" type="Sample" id=1]
-[ext_resource path="res://corn/microwave_noise.smp" type="Sample" id=2]
+[ext_resource path="res://microwave_noise.smp" type="Sample" id=2]
 [ext_resource path="res://corn/microwave_starting.wav" type="Sample" id=3]
 [ext_resource path="res://corn/ping.wav" type="Sample" id=4]
-[ext_resource path="res://Pipo_InterludoBeta.smp" type="Sample" id=5]
+[ext_resource path="res://corn/118655__pyzaist__yay - 8-bit.wav" type="Sample" id=5]
 
 [resource]
 
-samples/high-pitched_comemoration = { "db":-10.0, "pitch":1.0, "sample":ExtResource( 1 ) }
-samples/microwave_noise = { "db":-12.0, "pitch":1.0, "sample":ExtResource( 2 ) }
+samples/comemoration = { "db":0.0, "pitch":1.0, "sample":ExtResource( 1 ) }
+samples/microwave_noise = { "db":-24.0, "pitch":1.0, "sample":ExtResource( 2 ) }
 samples/microwave_starting = { "db":24.0, "pitch":1.0, "sample":ExtResource( 3 ) }
 samples/ping = { "db":24.0, "pitch":1.0, "sample":ExtResource( 4 ) }
-samples/pipo = { "db":-10.0, "pitch":1.3, "sample":ExtResource( 5 ) }
+samples/yay = { "db":0.0, "pitch":1.0, "sample":ExtResource( 5 ) }
 
