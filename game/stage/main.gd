@@ -11,6 +11,7 @@ func _ready():
 	get_node("menu/popcorn").connect("microwave_start", self, "on_start")
 	get_node("display").connect("game_timeout", self, "on_player_win")
 	get_node("menu/Sprite 2").hide()
+	get_node("menu/credits 2").hide()
 	player_node = get_node("player_corn")
 	player_pos = player_node.get_pos()
 	
@@ -37,6 +38,7 @@ func on_start():
 	get_node("menu/quit/door").hide()
 	get_node("menu/Sprite").hide()
 	get_node("menu/Sprite 2").hide()
+	get_node("menu/credits 2").hide()
 	
 	# Disable buttons
 	get_node("menu/popcorn").set_disabled(true)

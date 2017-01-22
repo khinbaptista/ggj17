@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=1]
+[gd_scene load_steps=18 format=1]
 
 [ext_resource path="res://MicrowaveWhite.png" type="Texture" id=1]
 [ext_resource path="res://MicrowaveBG.png" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://win.tres" type="Animation" id=13]
 [ext_resource path="res://main_menu/menu_sounds.tres" type="SampleLibrary" id=14]
 [ext_resource path="res://Pipo_InterludoBeta.smp" type="Sample" id=15]
+[ext_resource path="res://credits.jpg" type="Texture" id=16]
 
 [sub_resource type="SampleLibrary" id=1]
 
@@ -111,7 +112,6 @@ autoplay = "blink"
 
 [node name="Sprite 2" type="Sprite" parent="."]
 
-visibility/visible = false
 transform/pos = Vector2( 389.375, 299 )
 transform/scale = Vector2( 4, 4 )
 texture = ExtResource( 12 )
@@ -162,5 +162,11 @@ default/filter/gain = 1.0
 default/reverb_room = 2
 default/reverb_send = 0.0
 default/chorus_send = 0.0
+
+[node name="credits 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 406.385, 292.756 )
+transform/scale = Vector2( 1.35406, 1.35406 )
+texture = ExtResource( 16 )
 
 
