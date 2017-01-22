@@ -87,8 +87,8 @@ script/script = ExtResource( 8 )
 
 [node name="door" type="Sprite" parent="quit"]
 
-transform/pos = Vector2( -437.069, 57.4531 )
-transform/scale = Vector2( 1.44816, 1.50122 )
+transform/pos = Vector2( -433.069, 58.1014 )
+transform/scale = Vector2( 1.44816, 1.51003 )
 texture = ExtResource( 9 )
 
 [node name="Sprite" type="Sprite" parent="."]
