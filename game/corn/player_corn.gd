@@ -39,6 +39,7 @@ func _fixed_process(delta):
 
 func _input(event):
 	if event.is_action_pressed("jump") and not event.is_echo() and not jumping and grounded:
+		get_node("SamplePlayer").play("jump")
 		jumping = true
 		jump_timer = 0.0
 		print("new jump")
