@@ -50,6 +50,10 @@ script/script = ExtResource( 1 )
 process/pause_mode = 2
 editor/display_folded = true
 
+[node name="Sprite" parent="menu"]
+
+editor/display_folded = true
+
 [node name="walls" type="Node2D" parent="."]
 
 editor/display_folded = true

@@ -9,6 +9,7 @@ func _ready():
 	
 	setHideKernels(true)
 	get_node("menu/popcorn").connect("microwave_start", self, "on_start")
+	get_node("display").connect("game_timeout", self, "on_player_win")
 	
 	player_node = get_node("player_corn")
 	player_pos = player_node.get_pos()
@@ -58,11 +59,9 @@ func on_game_over():
 	
 	var player_res = preload("res://corn/player_corn.tscn")
 	player_node = player_res.instance()
-	#player_node.set_name("player_corn")
 	
 	add_child(player_node)
 	player_node.set_global_pos(player_pos)
-	#player_node.connect("popped", self, "on_game_over")
 	
 	# Reveal other elements
 	get_node("menu/quit/door").show()
@@ -70,3 +69,7 @@ func on_game_over():
 	
 	# Hide again
 	setHideKernels(true)
+
+func on_player_win():
+	player_node.queue_free()
+	on_game_over()
