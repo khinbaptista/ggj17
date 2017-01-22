@@ -72,7 +72,12 @@ func on_game_over():
 	setHideKernels(true)
 	
 	get_node("display").clear_timer()
+	stop_sounds()
 
 func on_player_win():
 	player_node.queue_free()
 	on_game_over()
+
+func stop_sounds():
+	get_node("SamplePlayer").stop_all()
+	get_node("Music").stop_all()
