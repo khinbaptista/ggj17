@@ -39,7 +39,9 @@ func _fixed_process(delta):
 
 func _input(event):
 	if event.is_action_pressed("jump") and not event.is_echo() and not jumping and grounded:
-		get_node("SamplePlayer").play("jump")
+		var soundFX = get_node("soundfx")
+		var voice = soundFX.play("jump")
+		soundFX.set_pitch_scale(voice, 0.5 + randf() * 0.5)
 		jumping = true
 		jump_timer = 0.0
 		print("new jump")

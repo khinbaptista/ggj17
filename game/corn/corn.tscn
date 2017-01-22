@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=1]
+[gd_scene load_steps=14 format=1]
 
 [ext_resource path="res://corn/corn.gd" type="Script" id=1]
 [ext_resource path="res://corn/npc corn.png" type="Texture" id=2]
@@ -9,8 +9,7 @@
 [ext_resource path="res://corn/stage5.tres" type="Animation" id=7]
 [ext_resource path="res://corn/stage0.tres" type="Animation" id=8]
 [ext_resource path="res://corn/corn_explosion.gd" type="Script" id=9]
-[ext_resource path="res://corn/341247__jeremysykes__jump01.wav" type="Sample" id=10]
-[ext_resource path="res://corn/66393__110110010__bottle-pop.wav" type="Sample" id=11]
+[ext_resource path="res://corn/66393__110110010__bottle-pop.wav" type="Sample" id=10]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -25,8 +24,7 @@ radius = 77.7416
 
 [sub_resource type="SampleLibrary" id=3]
 
-samples/341247__jeremysykes__jump01 = { "db":0.0, "pitch":1.0, "sample":ExtResource( 10 ) }
-samples/pop = { "db":0.0, "pitch":0.75, "sample":ExtResource( 11 ) }
+samples/pop = { "db":0.0, "pitch":0.75, "sample":ExtResource( 10 ) }
 
 [node name="corn" type="RigidBody2D"]
 
