@@ -16,6 +16,7 @@ transform/pos = Vector2( 973.856, 72.8359 )
 transform/scale = Vector2( 1.42982, 1.42982 )
 texture = ExtResource( 2 )
 hframes = 10
+modulate = Color( 0.301961, 0.552941, 0.847059, 1 )
 region_rect = Rect2( 0, 0, 21, 37 )
 
 [node name="sec_ten" type="Sprite" parent="."]
@@ -24,6 +25,7 @@ transform/pos = Vector2( 944.896, 72.8359 )
 transform/scale = Vector2( 1.42982, 1.42982 )
 texture = ExtResource( 2 )
 hframes = 10
+modulate = Color( 0.301961, 0.552941, 0.847059, 1 )
 region_rect = Rect2( 0, 0, 21, 37 )
 
 [node name="min_unit" type="Sprite" parent="."]
@@ -32,6 +34,7 @@ transform/pos = Vector2( 902.483, 72.8359 )
 transform/scale = Vector2( 1.42982, 1.42982 )
 texture = ExtResource( 2 )
 hframes = 10
+modulate = Color( 0.301961, 0.552941, 0.847059, 1 )
 region_rect = Rect2( 0, 0, 21, 37 )
 
 [node name="min_ten" type="Sprite" parent="."]
@@ -40,6 +43,7 @@ transform/pos = Vector2( 873.222, 72.8359 )
 transform/scale = Vector2( 1.42982, 1.42982 )
 texture = ExtResource( 2 )
 hframes = 10
+modulate = Color( 0.301961, 0.552941, 0.847059, 1 )
 region_rect = Rect2( 0, 0, 21, 37 )
 
 
