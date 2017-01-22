@@ -1,11 +1,12 @@
-[gd_scene load_steps=9 format=1]
+[gd_scene load_steps=10 format=1]
 
 [ext_resource path="res://wave/wave.gd" type="Script" id=1]
 [ext_resource path="res://wave/wavebigger.png" type="Texture" id=2]
 [ext_resource path="res://wave/wave.tres" type="Animation" id=3]
 [ext_resource path="res://wave/heat.gd" type="Script" id=4]
+[ext_resource path="res://wave/light_shape.png" type="Texture" id=5]
 
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="CapsuleShape2D" id=5]
 
 custom_solver_bias = 0.0
 radius = 9.75098
@@ -29,7 +30,7 @@ height = 43.4815
 [node name="wave" type="KinematicBody2D"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( -4.37114e-08, 1, -1, -4.37114e-08, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 6
@@ -41,8 +42,9 @@ left = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
+visibility/visible = false
 transform/rot = -90.0
-shape = SubResource( 1 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 
@@ -53,7 +55,7 @@ transform/pos = Vector2( -17, 0 )
 transform/scale = Vector2( 1.99567, 1.99567 )
 texture = ExtResource( 2 )
 hframes = 4
-modulate = Color( 1, 0.203125, 0.203125, 1 )
+modulate = Color( 0.867227, 0.0541992, 0.0541992, 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
 
@@ -73,7 +75,7 @@ transform/pos = Vector2( 18.1975, 0 )
 transform/scale = Vector2( 1.99567, 1.99567 )
 texture = ExtResource( 2 )
 hframes = 4
-modulate = Color( 1, 0.203125, 0.203125, 1 )
+modulate = Color( 0.867227, 0.0541992, 0.0541992, 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite1"]
 
@@ -101,9 +103,33 @@ damage = 10.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 
+visibility/visible = false
 transform/rot = -90.0
 shape = SubResource( 4 )
 trigger = true
 _update_shape_index = 0
+
+[node name="Light2D" type="Light2D" parent="."]
+
+transform/scale = Vector2( 0.285336, 0.193522 )
+enabled = true
+editor_only = false
+texture = ExtResource( 5 )
+offset = Vector2( 0, 0 )
+scale = 1.0
+color = Color( 0.949219, 0.155789, 0.0259552, 1 )
+energy = 1.0
+mode = 0
+range/height = 0.0
+range/z_min = -1024
+range/z_max = 1024
+range/layer_min = 0
+range/layer_max = 0
+range/item_mask = 1
+shadow/enabled = false
+shadow/color = Color( 0, 0, 0, 0 )
+shadow/buffer_size = 2048
+shadow/esm_multiplier = 80.0
+shadow/item_mask = 1
 
 

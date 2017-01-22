@@ -51,8 +51,8 @@ damp_override/linear = -1.0
 damp_override/angular = -1.0
 script/script = ExtResource( 1 )
 health = 50.0
-start_color = Color( 0.863281, 0.762115, 0.458618, 1 )
-pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
+start_color = Color( 0.796078, 0.796078, 0.796078, 1 )
+pop_color = Color( 0.945312, 0.420959, 0.420959, 1 )
 diff_anims = 5
 min_pitch_ratio = 0.5
 delta_pitch_ratio = 0.5
@@ -63,7 +63,7 @@ texture = ExtResource( 2 )
 vframes = 7
 hframes = 3
 frame = 1
-modulate = Color( 0.862745, 0.760784, 0.454902, 1 )
+modulate = Color( 0.796875, 0.796875, 0.796875, 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
 

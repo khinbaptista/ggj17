@@ -246,6 +246,7 @@ time_scale = 2.0
 [node name="player_corn" parent="." instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 428.858, 68.6342 )
+pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
 
 
 [editable path="menu"]
