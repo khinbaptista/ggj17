@@ -91,6 +91,8 @@ func on_player_win():
 	get_node("menu/Sprite 2").show()
 	get_node("menu/Sprite").hide()
 	get_node("menu/Sprite 2/AnimationPlayer").play("win");
+	get_node("SamplePlayer").play("comemoration")
+	
 	on_game_over()
 
 func stop_sounds():
