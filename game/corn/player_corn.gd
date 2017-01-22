@@ -21,6 +21,8 @@ func _ready():
 	
 	set_fixed_process(true)
 	set_process_input(true)
+	
+	get_node("impact/AnimationPlayer").connect("finished", get_node("impact"), "hide")
 
 func _fixed_process(delta):
 	grounded = is_grounded()
@@ -54,3 +56,14 @@ func is_grounded():
 	var cast = space.intersect_ray(global_pos, global_pos + Vector2(0, ground_test_distance), [self] )
 	
 	return not cast.empty()
+
+func hit(damage):
+	var impact = get_node("impact")
+	impact.show()
+	impact.get_node("AnimationPlayer").play("impact")
+	
+	var sound = get_node("SamplePlayer")
+	if sound.get_sample_library().has_sample("impact"):
+		sound.play("impact")
+	
+	.hit(damage)
