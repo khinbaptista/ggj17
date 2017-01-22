@@ -76,6 +76,9 @@ func on_game_over():
 
 func on_player_win():
 	player_node.queue_free()
+	get_node("menu/Sprite 2").show()
+	get_node("menu/Sprite").hide()
+	get_node("menu/Sprite 2/AnimationPlayer").play("win");
 	on_game_over()
 
 func stop_sounds():
