@@ -20,7 +20,7 @@ height = 6.74344
 [sub_resource type="CircleShape2D" id=2]
 
 custom_solver_bias = 0.0
-radius = 77.7416
+radius = 64.2462
 
 [sub_resource type="SampleLibrary" id=3]
 

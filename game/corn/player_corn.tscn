@@ -48,6 +48,10 @@ modulate = Color( 1, 1, 1, 1 )
 transform/pos = Vector2( -0.296192, -0.755714 )
 transform/scale = Vector2( 1.57178, 1.57178 )
 
+[node name="explosion" parent="."]
+
+editor/display_folded = false
+
 [node name="impact" type="Sprite" parent="."]
 
 editor/display_folded = true
