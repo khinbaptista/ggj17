@@ -170,7 +170,7 @@ transform/pos = Vector2( 545.069, 417.12 )
 
 [node name="corn80 3" parent="." instance=ExtResource( 1 )]
 
-transform/pos = Vector2( 214.807, 143.334 )
+transform/pos = Vector2( 166.925, 221.909 )
 
 [node name="corn5 2" parent="." instance=ExtResource( 1 )]
 
@@ -178,7 +178,7 @@ transform/pos = Vector2( 609.676, 338.395 )
 
 [node name="corn57" parent="." instance=ExtResource( 1 )]
 
-transform/pos = Vector2( 202.066, 108.808 )
+transform/pos = Vector2( 155.412, 153.007 )
 
 [node name="corn53" parent="." instance=ExtResource( 1 )]
 
@@ -202,7 +202,7 @@ transform/pos = Vector2( 585.558, 383.615 )
 
 [node name="corn9 2" parent="." instance=ExtResource( 1 )]
 
-transform/pos = Vector2( 141.116, 82.8188 )
+transform/pos = Vector2( 89.5509, 130.701 )
 
 [node name="corn7 2" parent="." instance=ExtResource( 1 )]
 
@@ -218,7 +218,7 @@ transform/pos = Vector2( 603.855, 466.862 )
 
 [node name="corn80" parent="." instance=ExtResource( 1 )]
 
-transform/pos = Vector2( 253.949, 191.848 )
+transform/pos = Vector2( 239.216, 147.649 )
 
 [node name="corn5" parent="." instance=ExtResource( 1 )]
 
@@ -234,7 +234,7 @@ transform/pos = Vector2( 737.8, 351.961 )
 
 [node name="corn711" parent="." instance=ExtResource( 1 )]
 
-transform/pos = Vector2( 131.297, 178.85 )
+transform/pos = Vector2( 101.831, 230.415 )
 
 [node name="corn78" parent="." instance=ExtResource( 1 )]
 
@@ -243,6 +243,5 @@ transform/pos = Vector2( 686.759, 465.384 )
 [node name="corn80 2" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( 466.994, 135.122 )
-transform/scale = Vector2( 1, 1 )
 
 

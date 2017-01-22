@@ -30,6 +30,7 @@ func on_start():
 	var display = get_node("display")
 	display.minutes = 3
 	display.seconds = 30
+	display.time_scale = 3.0
 	display.start_display()
 	
 	# Hide other elements
