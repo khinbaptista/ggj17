@@ -1,18 +1,19 @@
-[gd_scene load_steps=19 format=1]
+[gd_scene load_steps=20 format=1]
 
 [ext_resource path="res://stage/main.gd" type="Script" id=1]
 [ext_resource path="res://stage/menu.tscn" type="PackedScene" id=2]
-[ext_resource path="res://corn/player_corn.tscn" type="PackedScene" id=3]
-[ext_resource path="res://wave/wavecreator.tscn" type="PackedScene" id=4]
-[ext_resource path="res://wave/wave_destroyer.gd" type="Script" id=5]
-[ext_resource path="res://corn/high-pitched_comemoration.wav" type="Sample" id=6]
-[ext_resource path="res://microwave_noise.smp" type="Sample" id=7]
-[ext_resource path="res://corn/microwave_starting.wav" type="Sample" id=8]
-[ext_resource path="res://corn/ping.wav" type="Sample" id=9]
-[ext_resource path="res://corn/118655__pyzaist__yay - 8-bit.wav" type="Sample" id=10]
-[ext_resource path="res://Pipo_InterludoBeta.smp" type="Sample" id=11]
-[ext_resource path="res://stage/display/display.tscn" type="PackedScene" id=12]
-[ext_resource path="res://corn/corn_collection.tscn" type="PackedScene" id=13]
+[ext_resource path="res://credits.jpg" type="Texture" id=3]
+[ext_resource path="res://corn/player_corn.tscn" type="PackedScene" id=4]
+[ext_resource path="res://wave/wavecreator.tscn" type="PackedScene" id=5]
+[ext_resource path="res://wave/wave_destroyer.gd" type="Script" id=6]
+[ext_resource path="res://corn/high-pitched_comemoration.wav" type="Sample" id=7]
+[ext_resource path="res://microwave_noise.smp" type="Sample" id=8]
+[ext_resource path="res://corn/microwave_starting.wav" type="Sample" id=9]
+[ext_resource path="res://corn/ping.wav" type="Sample" id=10]
+[ext_resource path="res://corn/118655__pyzaist__yay - 8-bit.wav" type="Sample" id=11]
+[ext_resource path="res://Pipo_InterludoBeta.smp" type="Sample" id=12]
+[ext_resource path="res://stage/display/display.tscn" type="PackedScene" id=13]
+[ext_resource path="res://corn/corn_collection.tscn" type="PackedScene" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -31,15 +32,15 @@ extents = Vector2( 10, 346.321 )
 
 [sub_resource type="SampleLibrary" id=4]
 
-samples/comemoration = { "db":0.0, "pitch":1.0, "sample":ExtResource( 6 ) }
-samples/microwave_noise = { "db":24.0, "pitch":1.0, "sample":ExtResource( 7 ) }
-samples/microwave_starting = { "db":24.0, "pitch":1.0, "sample":ExtResource( 8 ) }
-samples/ping = { "db":24.0, "pitch":1.0, "sample":ExtResource( 9 ) }
-samples/yay = { "db":0.0, "pitch":1.0, "sample":ExtResource( 10 ) }
+samples/comemoration = { "db":0.0, "pitch":1.0, "sample":ExtResource( 7 ) }
+samples/microwave_noise = { "db":24.0, "pitch":1.0, "sample":ExtResource( 8 ) }
+samples/microwave_starting = { "db":24.0, "pitch":1.0, "sample":ExtResource( 9 ) }
+samples/ping = { "db":24.0, "pitch":1.0, "sample":ExtResource( 10 ) }
+samples/yay = { "db":0.0, "pitch":1.0, "sample":ExtResource( 11 ) }
 
 [sub_resource type="SampleLibrary" id=5]
 
-samples/pipo = { "db":-15.0, "pitch":1.3, "sample":ExtResource( 11 ) }
+samples/pipo = { "db":-15.0, "pitch":1.3, "sample":ExtResource( 12 ) }
 
 [node name="main" type="Node"]
 
@@ -48,6 +49,7 @@ script/script = ExtResource( 1 )
 [node name="menu" parent="." instance=ExtResource( 2 )]
 
 process/pause_mode = 2
+editor/display_folded = true
 
 [node name="Sprite" parent="menu"]
 
@@ -58,9 +60,12 @@ editor/display_folded = true
 editor/display_folded = true
 frame = 2
 
-[node name="credits 2" parent="menu"]
+[node name="credits 2" type="Sprite" parent="menu"]
 
 visibility/visible = false
+transform/pos = Vector2( 406.385, 292.756 )
+transform/scale = Vector2( 1.35406, 1.35406 )
+texture = ExtResource( 3 )
 
 [node name="walls" type="Node2D" parent="."]
 
@@ -153,11 +158,11 @@ shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 
-[node name="player_corn" parent="." instance=ExtResource( 3 )]
+[node name="player_corn" parent="." instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 428.858, 68.6342 )
 
-[node name="wavecreator" parent="." instance=ExtResource( 4 )]
+[node name="wavecreator" parent="." instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 47.7135, 65.8902 )
 leftWay = false
@@ -180,7 +185,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 collision/layers = 2
 collision/mask = 2
-script/script = ExtResource( 5 )
+script/script = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="destroyers/Area2D"]
 
@@ -202,7 +207,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 collision/layers = 2
 collision/mask = 2
-script/script = ExtResource( 5 )
+script/script = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="destroyers/Area2D1"]
 
@@ -244,15 +249,15 @@ default/reverb_room = 2
 default/reverb_send = 0.0
 default/chorus_send = 0.0
 
-[node name="wavecreator 2" parent="." instance=ExtResource( 4 )]
+[node name="wavecreator 2" parent="." instance=ExtResource( 5 )]
 
 leftWay = true
 
-[node name="display" parent="." instance=ExtResource( 12 )]
+[node name="display" parent="." instance=ExtResource( 13 )]
 
 time_scale = 2.0
 
-[node name="corns" parent="." instance=ExtResource( 13 )]
+[node name="corns" parent="." instance=ExtResource( 14 )]
 
 
 [editable path="menu"]

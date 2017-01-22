@@ -14,6 +14,7 @@ func _ready():
 	get_node("menu/credits 2").hide()
 	player_node = get_node("player_corn")
 	player_pos = player_node.get_pos()
+	player_node.hide()
 	
 func setHideKernels(value):
 	# Hide kernels
@@ -33,6 +34,8 @@ func on_start():
 	display.seconds = 30
 	display.time_scale = 3.0
 	display.start_display()
+	
+	player_node.show()
 	
 	# Hide other elements
 	get_node("menu/quit/door").hide()
@@ -61,11 +64,17 @@ func on_game_over():
 	node_collection.set_name("corns")
 	add_child(node_collection)
 	
+	#var player_pop = find_node("popcorn")
+	#if(!player_pop.is_type("TextureButton")):
+	#	player_pop.queue_free()
+				
 	var player_res = preload("res://corn/player_corn.tscn")
 	player_node = player_res.instance()
 	
 	add_child(player_node)
 	player_node.set_global_pos(player_pos)
+	
+	player_node.hide()
 	
 	# Reveal other elements
 	get_node("menu/quit/door").show()
