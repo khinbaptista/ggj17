@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=1]
+[gd_scene load_steps=9 format=1]
 
 [ext_resource path="res://wave/wave.gd" type="Script" id=1]
 [ext_resource path="res://wave/wavebigger.png" type="Texture" id=2]
@@ -8,8 +8,8 @@
 [sub_resource type="CapsuleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 8.98069
-height = 21.3761
+radius = 9.75098
+height = 51.9142
 
 [sub_resource type="CanvasItemShader" id=2]
 
@@ -20,11 +20,17 @@ _code = { "fragment":"", "fragment_ofs":0, "light":"", "light_ofs":0, "vertex":"
 shader/shader = SubResource( 2 )
 shader/shading_mode = 0
 
+[sub_resource type="CapsuleShape2D" id=4]
+
+custom_solver_bias = 0.0
+radius = 14.7579
+height = 43.4815
+
 [node name="wave" type="KinematicBody2D"]
 
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 3.83355, 0, 0, 1, 0, 0 )
+shapes/0/transform = Matrix32( -4.37114e-08, 1, -1, -4.37114e-08, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 6
 collision/mask = 0
@@ -35,7 +41,7 @@ left = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
-transform/scale = Vector2( 3.83355, 1 )
+transform/rot = -90.0
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
@@ -83,8 +89,8 @@ autoplay = "wave"
 [node name="Area2D" type="Area2D" parent="."]
 
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( -4.37114e-08, 1, -1, -4.37114e-08, 17.3924, -1.1471e-06 )
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( -4.37114e-08, 1, -1, -4.37114e-08, 0, 0 )
 shapes/0/trigger = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -95,10 +101,8 @@ damage = 10.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 
-visibility/visible = false
-transform/pos = Vector2( 17.3924, -1.1471e-06 )
 transform/rot = -90.0
-shape = SubResource( 1 )
+shape = SubResource( 4 )
 trigger = true
 _update_shape_index = 0
 
