@@ -70,6 +70,8 @@ func on_game_over():
 	
 	# Hide again
 	setHideKernels(true)
+	
+	get_node("display").clear_timer()
 
 func on_player_win():
 	player_node.queue_free()

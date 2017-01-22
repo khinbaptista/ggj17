@@ -33,6 +33,7 @@ func elapsed_second():
 			seconds = 59
 			minutes -= 1
 		else:
+			clear_timer()
 			emit_signal("game_timeout")
 	else:
 		seconds -= 1
@@ -44,3 +45,7 @@ func set_display(m, s):
 	if s >= 0 and s < 60:
 		sec_unit.set_frame(s % 10)
 		sec_ten.set_frame(floor(s / 10))
+
+func clear_timer():
+	timer.stop()
+	timer.queue_free()
