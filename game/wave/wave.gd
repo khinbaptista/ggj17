@@ -24,7 +24,6 @@ func _fixed_process(delta):
 func changeDir():
 	if is_colliding() :
 		acclast = 0
-		print(get_collision_normal().reflect(get_travel()))
 		return get_collision_normal().reflect(get_travel())
 	else:
 		return get_travel()
