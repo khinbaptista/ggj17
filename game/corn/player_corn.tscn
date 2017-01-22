@@ -6,14 +6,16 @@
 
 [node name="player_corn" instance=ExtResource( 1 )]
 
+bounce = 0.0
+gravity_scale = 7.0
 script/script = ExtResource( 2 )
 health = 100.0
 start_color = Color( 1, 1, 1, 1 )
 pop_color = Color( 0.804688, 0.191742, 0.191742, 1 )
-speed = 10
-jump_impulse = 350
+speed = 25
+jump_impulse = 400
 max_jump_duration = 0.3
-ground_test_distance = 20
+ground_test_distance = 50
 
 [node name="Sprite" parent="."]
 

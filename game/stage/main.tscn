@@ -147,7 +147,7 @@ _update_shape_index = 0
 
 [node name="player_corn" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 416.581, 172.992 )
+transform/pos = Vector2( 430.086, 71.0896 )
 
 [node name="wavecreator" parent="." instance=ExtResource( 4 )]
 
