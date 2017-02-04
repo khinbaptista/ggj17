@@ -12,6 +12,7 @@ export(float, 0, 1, 0.05) var delta_pitch_ratio = 0.5
 var max_health
 var anim
 
+signal about_to_pop
 signal popped
 
 func _ready():
@@ -28,6 +29,7 @@ func hit(damage):
 	
 	if health <= 0:
 		health = 0
+		emit_signal("about_to_pop")
 		get_node("Sprite").set_modulate(Color(1, 1, 1))
 		changeAnim("Stage 5")
 		#anim.connect("finished", self, "emit_signal", ["popped"])
@@ -53,9 +55,8 @@ func changeAnim(animName):
 func death():
 	var sample_player = get_node("SamplePlayer")
 	var voice = sample_player.play("pop")
-	sample_player.set_pitch_scale(voice, min_pitch_ratio + randf() * delta_pitch_ratio)
 	
-	while sample_player.is_active():
-		yield(get_tree(), "idle_frame")
+	sample_player.set_pitch_scale(voice, min_pitch_ratio + randf() * delta_pitch_ratio)
+	while sample_player.is_active(): yield(get_tree(), "idle_frame")
 	
 	emit_signal("popped")

@@ -29,5 +29,5 @@ func _fixed_process(delta):
 			newWave.set_pos(Vector2(700, rand_range(0.2*height, 0.8*height)))
 		else:
 			newWave.set_pos(Vector2(50, rand_range(0.2*height, 0.8*height)))
-		get_tree().get_root().add_child(newWave)
+		add_child(newWave)
 		acctime = 0

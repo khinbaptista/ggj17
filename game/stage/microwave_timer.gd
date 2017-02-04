@@ -1,8 +1,8 @@
 extends Node
 
 export(float, 0.1, 5.0, 0.1) var time_scale = 2.0
-export(int, 0, 9) var minutes = 3
-export(int, 0, 59) var seconds = 30
+var minutes = 3
+var seconds = 30
 
 var sec_unit
 var sec_ten
@@ -49,3 +49,4 @@ func set_display(m, s):
 func clear_timer():
 	timer.stop()
 	timer.queue_free()
+	set_display(0, 0)
