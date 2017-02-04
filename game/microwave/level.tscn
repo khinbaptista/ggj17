@@ -1,0 +1,233 @@
+[gd_scene load_steps=9 format=1]
+
+[ext_resource path="res://wave/wavecreator.tscn" type="PackedScene" id=1]
+[ext_resource path="res://wave/wave_destroyer.gd" type="Script" id=2]
+[ext_resource path="res://corn/corn_collection.tscn" type="PackedScene" id=3]
+[ext_resource path="res://corn/player_corn.tscn" type="PackedScene" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 411.541, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 271.293 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 346.321 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 415.73 )
+
+[node name="level" type="Node"]
+
+[node name="walls" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="top" type="StaticBody2D" parent="walls"]
+
+editor/display_folded = true
+transform/pos = Vector2( 456.724, 318.049 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -46.7274, -296.946 )
+shapes/0/trigger = false
+collision/layers = 3
+collision/mask = 3
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/top"]
+
+transform/pos = Vector2( -46.7274, -296.946 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="bottom" type="StaticBody2D" parent="walls"]
+
+editor/display_folded = true
+transform/pos = Vector2( 464.261, 871.243 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -46.7274, -296.946 )
+shapes/0/trigger = false
+collision/layers = 3
+collision/mask = 3
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/bottom"]
+
+transform/pos = Vector2( -46.7274, -296.946 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="left" type="StaticBody2D" parent="walls"]
+
+editor/display_folded = true
+input/pickable = false
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 19.5954, 298.453 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/left"]
+
+transform/pos = Vector2( 19.5954, 298.453 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+
+[node name="right" type="StaticBody2D" parent="walls"]
+
+editor/display_folded = true
+transform/pos = Vector2( 794.369, 0 )
+input/pickable = false
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 19.5954, 298.453 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/right"]
+
+transform/pos = Vector2( 19.5954, 298.453 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+
+[node name="wavecreator 2" parent="." instance=ExtResource( 1 )]
+
+leftWay = true
+
+[node name="wavecreator" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 47.7135, 65.8902 )
+leftWay = false
+
+[node name="destroyers" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="Area2D" type="Area2D" parent="destroyers"]
+
+editor/display_folded = true
+transform/pos = Vector2( -27.2075, 287.039 )
+input/pickable = true
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision/layers = 2
+collision/mask = 2
+script/script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="destroyers/Area2D"]
+
+shape = SubResource( 3 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Area2D1" type="Area2D" parent="destroyers"]
+
+editor/display_folded = true
+transform/pos = Vector2( 844.793, 287.039 )
+input/pickable = true
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision/layers = 2
+collision/mask = 2
+script/script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="destroyers/Area2D1"]
+
+shape = SubResource( 3 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Area2D2" type="Area2D" parent="destroyers"]
+
+editor/display_folded = true
+transform/pos = Vector2( 407.119, 620.558 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( -4.37114e-08, -1, 1, -4.37114e-08, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision/layers = 2
+collision/mask = 2
+script/script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="destroyers/Area2D2"]
+
+transform/rot = 90.0
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Area2D3" type="Area2D" parent="destroyers"]
+
+editor/display_folded = true
+transform/pos = Vector2( 407.119, -19.8869 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( -4.37114e-08, -1, 1, -4.37114e-08, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision/layers = 2
+collision/mask = 2
+script/script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="destroyers/Area2D3"]
+
+transform/rot = 90.0
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="corns" parent="." instance=ExtResource( 3 )]
+
+editor/display_folded = true
+
+[node name="player_corn" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 414.454, 87.4708 )
+pop_color = Color( 0.761719, 0.19043, 0.19043, 1 )
+
+
