@@ -35,6 +35,7 @@ func on_start():
 	get_node("gui/credits").set_disabled(true)
 	get_node("gui/popcorn").set_disabled(true)
 	
+	get_node("gui/door").set_hidden(true)
 	get_node("gui/title").set_hidden(true)
 	get_node("gui/comemoration").set_hidden(true)
 	
@@ -58,6 +59,7 @@ func on_game_over(comemorate):
 	get_node("gui/credits").set_disabled(false)
 	get_node("gui/popcorn").set_disabled(false)
 	get_node("gui/title").set_hidden(false)
+	get_node("gui/door").set_hidden(false)
 	
 	if comemorate:
 		get_node("gui/comemoration").set_hidden(false)
